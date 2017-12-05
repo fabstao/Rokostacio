@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROKOStacio</title>
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+<script src="/javascripts/jquery-1.11.3.min.js"></script>
+<script src="/javascripts/md5.js"></script>
+<script>
+    function terminos() {
+        $("#terminos").show();
+    }
+    
+    function noterminos() {
+        $("#terminos").hide();
+    }
+
+function borrar(rolaid) {
+    var siborrar=confirm("Está a punto de borrar su canción, ¿Está segur@?");
+    if(siborrar) {
+        $.get("/rradio/borrar?borrar="+rolaid, function(dato,resp) {
+            alert("Borrada: " + dato + " Respuesta: " + resp); 
+            location.reload();
+        });
+    }
+}
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
+</head>
+<body>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+    }%>
+    
+<header>
+    <div id="caja1" align="right">
+    <br><h1>ROKOStacio</h1>
+    <h2>Transmisi&oacute;n de música independiente por internet</h2><br><br>
+    </div>
+</header>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+}%>
+
+<nav>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/cargar">Cargar rolas</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') { %>
+    <li><a href="/logout">Logout (Salir)</a></li>
+    <% } %>
+    <% if(typeof usuario === 'undefined') { %>
+    <li><a href="https://www.rokostacio.rocks/login">Login</a></li>
+    <li><a href="https://www.rokostacio.rocks/registro">Registrarse</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') {
+        if(visitante === "fabs@valtis.mx") { %>
+            <li><a href="/buscar">Listar rolas</a></li>
+        <% } 
+           } %>
+    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
+</ul>
+</nav>
+<section>
+
+<% if(typeof usuario !== 'undefined') { %>
+    <h4>Bienvenido <%= visitante %></h4>
+<% } %>
+<h2>Administrar mi perfil</h2>
+<p>
+    <form action='/registro/perfil' method="post" enctype="multipart/form-data">
+        Nombre de la banda o artista <input type="text" name="banda" maxlength="80" value="<%= banda %>" disabled>
+        <br>
+        Nombre del representante legal <input type="text" name="nombre" maxlength="120" value="<%= nombre %>" disabled>
+        <br>
+        Correo-e <input type="email" id="email" name="email" value="<%= email %>" disabled><br>
+        Contraseña <input type="password" name="password" maxlength="20" placeholder="****" ><br>
+        <br>
+        <textarea id="descripcion" name="descripcion" rows="4" 
+                  cols="42"><%= descripcion %></textarea><br><br>
+        Foto o logo (460x300, jpg &oacute; png): <input type="file" name="archivo" id="archivo" placeholder="Foto" accept="image/png, image/jpeg"><br>
+        <img src="/uploads/<%= foto %>" width="460" height="300"><br>
+        <br>
+        <input type="checkbox" name="aceptar" id="aceptar" checked  disabled> 
+        Acepto los <strong><a href="#" onclick="terminos()">términos y condiciones</a></strong><br>
+        <br><input type="submit" value="Actualizar"><br>
+    </form><br>
+</p>
+    <p>
+    <table>
+    <% 
+    function isOdd(n) {
+        return Math.abs(n % 2) == 1;
+    }
+    var i = 0;
+    var color = "#778889";
+    var val; 
+    rolas.forEach(function(listado) { 
+        i++;
+        console.log(i);
+        val = isOdd(i);
+        if(isOdd(i) == false) { color = "#BBCCDD"; }   
+        if(isOdd(i) == true) { color = "#8999AA"; }
+    %>
+        <tr><td bgcolor="<%= color %>">Banda: <b><%= listado.metadata.banda %></b></td>
+            <td bgcolor="<%= color %>">Rola: 
+                <audio controls><source src="/uploads/<%= listado._id %>" type="audio/mpeg">
+            </audio><%= listado.metadata.rola %></td><td bgcolor="<%= color %>">Aprobada: <%= listado.metadata.aprobada %></td><td bgcolor="<%= color %>">Borrar 
+            <% if(visitante) { %>
+            <input type="image" 
+                   src="/images/borrar.png" id="<%= listado._id %>"
+                   width="20" height="20" onclick="borrar('<%= listado._id %>');">
+            <% } %></td></tr>
+    <% }); %>
+    </table>
+    </p>
+<span id="terminos" style="display: none; position: absolute; top: 80px; left: 60px; width: 640px; 
+                           border: 2px solid #121212; background-color: white;
+                           overflow: auto; height: 460px">
+    <p class="contrato"><a class="contrato" href="#" onclick="noterminos()"><font color="black">Cerrar X</font></a></p>
+<div id="#contrato" class="contrato">
+<h3 class="tcontrato">Términos y Condiciones de Uso del Sitio Web Rokostacio.rocks</h3>
+<p class="contrato"> 
+Los siguientes términos y condiciones (los "Términos y Condiciones") rigen el uso que usted le dé a este sitio web y a cualquiera de los contenidos disponibles por o a través de este sitio web, incluyendo cualquier contenido derivado del mismo (el "Sitio Web", "ROKOStacio"). NUO Tecnolog&iacute;a S. de R.L. de C.V. ("NUO" o "nosotros") ha puesto a su disposición (de "Usted", el "Usuario") el Sitio Web. Podemos cambiar los Términos y Condiciones de vez en cuando, en cualquier momento sin ninguna notificación, sólo publicando los cambios en el Sitio Web. AL USAR EL SITIO WEB, USTED ACEPTA Y ESTÉ DE ACUERDO CON ESTOS TÉRMINOS Y CONDICIONES EN LO QUE SE REFIERE A SU USO DEL SITIO WEB. Si usted no está de acuerdo con estos Términos y Condiciones, no puede tener acceso al mismo ni usar el Sitio Web de ninguna otra manera.
+</p>
+<p class="contrato">
+1. <b>Licencia Limitada.</b> Usted puede (i) acceder y ver el contenido del Sitio Web desde su computadora o desde cualquier otro aparato y, a menos de que se indique de otra manera en estos Términos y Condiciones o en el Sitio Web, y (ii) sacar copias o impresiones individuales del contenido del Sitio Web para su uso personal, interno únicamente. Derivado de lo anterior, el uso del Sitio Web y de los servicios que se ofrecen en o a través del Sitio Web, son sólo para su uso personal, no comercial.
+</p>
+<p class="contrato">
+2. <b>Derechos de Propiedad.</b> "NUO" es el dueño exclusivo del sitio web "ROKOSTacio" con dirección de internet http://rokostacio.rocks así como de todo material gráfico y material de audio o discográfico promocional incluido en el mismo. Usted manifiesta tener los derechos de autor de cualquier material gráfico, discográfico y/o similar que suba al sitio web, identificándose en el formulario de registro usando el nombre legal bajo el cual se tiene la titularidad de dicho material.
+</p>
+<p class="contrato">
+3. <b>Límite de responsabilidad.</b> "NUO" provee el sitio web "ROKOSTacio" para su uso sin costo. Usted acepta el uso de este sitio web el cual no tiene garantía alguna. En ningún caso "NUO", ni sus subsidiarias, ni empleados ni agentes asumirán responsabilidad alguna por daños relacionados con el uso de este sitio. Usted o el Usuario se declaran dueños y titulares de todo el material que suban a el sitio web y por lo tanto tomarán toda la responsabilidad en el caso de infringir los derechos de autor de terceros.
+</p>
+<p class="contrato">
+4. <b>Informaci&oacute;n personalizada.</b> Para Usted o el o los Usuarios que deseen registrarse, "NUO" requiere pedir informaci&oacute;n personalizada para poder operar varias funcionalidades del sitio las cuales incluyen pero no se limitan a: identificar comportamiento del usuario as&iacute; como sus preferencias relacionadas al contenido del mismo, subir material discogr&aacute;fico para su promoci&oacute;n (ya sea gratuita o no), identificar al Usuario que infringa los derechos de autor de terceros.
+</p>
+<p class="contrato">
+5. <b>Marcas comerciales.</b> Las marcas comerciales mostradas en el sitio web, registradas y no registradas, son propiedad de NUO Tecnolog&iacute;a S. de R.L. de C.V. y no podrán ser reutilizadas sin consentimiento por escrito de "NUO" y/o sus representantes legales.
+</p>
+6. <b>Material prohibido.</b> Queda prohibido el subir material de tipo pornográfico, de contenido sexual explícito, así como material relacionado con pornografía infantil o cualquier material que infringa las leyes vigentes en los Estados Unidos Mexicanos. Si Usted sube material prohibido o ilegal, "NUO" se verá obligado a informar a las autoridades correspondientes. Usted librará a "NUO" de cualquier responsabilidad relacionada con material que no cumpla con la reglamentación vigente.
+</p>
+<p class="contrato">
+7. <b>Ley y jurisdicción aplicables</b>. Para la interpretación, cumplimiento y ejecución de éstos Términos y Condiciones de Uso del Sitio Web, "NUO" y Usted acuerdan que se someten a la jurisdicción de los tribunales competentes en Naucalpan de Juárez, Estado de México, renunciando al fuero que en virtud de sus domicilios actuales o futuros o por cualquier otro motivo pudiera corresponderles y que se regirán por las disposiciones aplicables en las leyes de México
+</p>
+</div>
+</span>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rokostacio-horizontal -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9211034721796534"
+     data-ad-slot="4966251387"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+</body>
+</html>

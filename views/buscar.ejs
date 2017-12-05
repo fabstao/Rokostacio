@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROKOStacio</title>
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<script src="/javascripts/jquery-1.11.3.min.js"></script>
+<script>
+function aprobar(rolaid) {
+    $.get("/rradio/aprobar?borrar="+rolaid, function(dato,resp) {
+        alert("Aprobada: " + dato + " Respuesta: " + resp);
+        $("#"+rolaid).disabled=true;   
+        location.reload();
+    });
+}
+</script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
+</head>
+<body>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+    }%>
+    
+<header>
+    <div id="caja1" align="right">
+    <br><h1>ROKOStacio</h1>
+    <h2>Transmisi&oacute;n de música independiente por internet</h2><br><br>
+    </div>
+</header>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+}%>
+
+<nav>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/cargar">Cargar rolas</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') { %>
+    <li><a href="/logout">Logout (Salir)</a></li>
+    <% } %>
+    <% if(typeof usuario === 'undefined') { %>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/registro">Registrarse</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') {
+        if(visitante === "fabs@valtis.mx") { %>
+            <li><a href="/buscar">Listar rolas</a></li>
+        <% } 
+           } %>
+</ul>
+</nav>
+<section>
+
+<% if(typeof usuario !== 'undefined') { %>
+    <h4>Bienvenido <%= visitante %></h4>
+<% } %>
+<h2>Bandas y rolas</h2>
+    <p>
+    <form action='/buscar/banda' method="get">
+        <input type="text" name="nombre"><br>
+        <input type="submit" value="Mandar">
+    </form>
+    </p>
+    <table class="listado">
+    <% 
+    function isOdd(n) {
+        return Math.abs(n % 2) == 1;
+    }
+    var i = 0;
+    var color = "#778889";
+    var val; 
+    matriz.forEach(function(listado) { 
+        i++;
+        console.log(i);
+        val = isOdd(i);
+        if(isOdd(i) == false) { color = "#BBCCDD"; }   
+        if(isOdd(i) == true) { color = "#8999AA"; }
+    %>
+        <tr><td bgcolor="<%= color %>">Banda: <b><%= listado.metadata.banda %></b></td>
+            <td bgcolor="<%= color %>">Rola: 
+                <audio controls><source src="/uploads/<%= listado._id %>" type="audio/mpeg">
+            </audio><%= listado.metadata.rola %></td><td bgcolor="<%= color %>">Aprobar 
+            <% if(visitante) { %>
+            <input type="image" 
+                   src="/images/aprobar.png" id="<%= listado._id %>"
+                   width="20" height="20" onclick="aprobar('<%= listado._id %>');">
+            <% } %></td></tr>
+    <% }); %>
+    </table>
+    </section>
+</body>
+</html>

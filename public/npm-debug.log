@@ -1,0 +1,1313 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.34
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/fsalaman/src/nodejs/rokostacio',
+5 verbose install   [ 'body-parser',
+5 verbose install     'cookie-parser',
+5 verbose install     'debug',
+5 verbose install     'express',
+5 verbose install     'serve-favicon',
+5 verbose install     'ejs',
+5 verbose install     'mongoose',
+5 verbose install     'gridfs-stream',
+5 verbose install     'mongodb',
+5 verbose install     'passport',
+5 verbose install     'passport-local',
+5 verbose install     'passport-facebook',
+5 verbose install     'multer',
+5 verbose install     'nodemon',
+5 verbose install     'express-session',
+5 verbose install     'connect-flash',
+5 verbose install     'nodemailer',
+5 verbose install     'nodemailer-smtp-transporter',
+5 verbose install     'forever' ] ]
+6 info preinstall rokostacio@0.0.0
+7 warn package.json passport@0.3.2 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'mongoose@latest', null ]
+10 verbose cache add name=undefined spec="mongoose@latest" args=["mongoose@latest",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'mongoose@latest',
+11 verbose parsed url   path: 'mongoose@latest',
+11 verbose parsed url   href: 'mongoose@latest' }
+12 verbose cache add [ 'gridfs-stream@latest', null ]
+13 verbose cache add name=undefined spec="gridfs-stream@latest" args=["gridfs-stream@latest",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'gridfs-stream@latest',
+14 verbose parsed url   path: 'gridfs-stream@latest',
+14 verbose parsed url   href: 'gridfs-stream@latest' }
+15 verbose cache add [ 'mongodb@latest', null ]
+16 verbose cache add name=undefined spec="mongodb@latest" args=["mongodb@latest",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'mongodb@latest',
+17 verbose parsed url   path: 'mongodb@latest',
+17 verbose parsed url   href: 'mongodb@latest' }
+18 verbose cache add [ 'passport@latest', null ]
+19 verbose cache add name=undefined spec="passport@latest" args=["passport@latest",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'passport@latest',
+20 verbose parsed url   path: 'passport@latest',
+20 verbose parsed url   href: 'passport@latest' }
+21 verbose cache add name="mongoose" spec="latest" args=["mongoose","latest"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'latest',
+22 verbose parsed url   path: 'latest',
+22 verbose parsed url   href: 'latest' }
+23 verbose addNamed [ 'mongoose', 'latest' ]
+24 verbose addNamed [ null, null ]
+25 verbose cache add name="gridfs-stream" spec="latest" args=["gridfs-stream","latest"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'latest',
+26 verbose parsed url   path: 'latest',
+26 verbose parsed url   href: 'latest' }
+27 verbose addNamed [ 'gridfs-stream', 'latest' ]
+28 verbose addNamed [ null, null ]
+29 verbose cache add name="mongodb" spec="latest" args=["mongodb","latest"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: 'latest',
+30 verbose parsed url   path: 'latest',
+30 verbose parsed url   href: 'latest' }
+31 verbose addNamed [ 'mongodb', 'latest' ]
+32 verbose addNamed [ null, null ]
+33 verbose cache add [ 'passport-local@latest', null ]
+34 verbose cache add name=undefined spec="passport-local@latest" args=["passport-local@latest",null]
+35 verbose parsed url { protocol: null,
+35 verbose parsed url   slashes: null,
+35 verbose parsed url   auth: null,
+35 verbose parsed url   host: null,
+35 verbose parsed url   port: null,
+35 verbose parsed url   hostname: null,
+35 verbose parsed url   hash: null,
+35 verbose parsed url   search: null,
+35 verbose parsed url   query: null,
+35 verbose parsed url   pathname: 'passport-local@latest',
+35 verbose parsed url   path: 'passport-local@latest',
+35 verbose parsed url   href: 'passport-local@latest' }
+36 verbose cache add [ 'passport-facebook@latest', null ]
+37 verbose cache add name=undefined spec="passport-facebook@latest" args=["passport-facebook@latest",null]
+38 verbose parsed url { protocol: null,
+38 verbose parsed url   slashes: null,
+38 verbose parsed url   auth: null,
+38 verbose parsed url   host: null,
+38 verbose parsed url   port: null,
+38 verbose parsed url   hostname: null,
+38 verbose parsed url   hash: null,
+38 verbose parsed url   search: null,
+38 verbose parsed url   query: null,
+38 verbose parsed url   pathname: 'passport-facebook@latest',
+38 verbose parsed url   path: 'passport-facebook@latest',
+38 verbose parsed url   href: 'passport-facebook@latest' }
+39 verbose cache add [ 'multer@latest', null ]
+40 verbose cache add name=undefined spec="multer@latest" args=["multer@latest",null]
+41 verbose parsed url { protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: 'multer@latest',
+41 verbose parsed url   path: 'multer@latest',
+41 verbose parsed url   href: 'multer@latest' }
+42 verbose cache add name="passport" spec="latest" args=["passport","latest"]
+43 verbose parsed url { protocol: null,
+43 verbose parsed url   slashes: null,
+43 verbose parsed url   auth: null,
+43 verbose parsed url   host: null,
+43 verbose parsed url   port: null,
+43 verbose parsed url   hostname: null,
+43 verbose parsed url   hash: null,
+43 verbose parsed url   search: null,
+43 verbose parsed url   query: null,
+43 verbose parsed url   pathname: 'latest',
+43 verbose parsed url   path: 'latest',
+43 verbose parsed url   href: 'latest' }
+44 verbose addNamed [ 'passport', 'latest' ]
+45 verbose addNamed [ null, null ]
+46 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+47 verbose lock mongoose@latest /Users/fsalaman/.npm/73e949f4-mongoose-latest.lock
+48 silly lockFile 7d4c030f-gridfs-stream-latest gridfs-stream@latest
+49 verbose lock gridfs-stream@latest /Users/fsalaman/.npm/7d4c030f-gridfs-stream-latest.lock
+50 silly lockFile d3746d4c-mongodb-latest mongodb@latest
+51 verbose lock mongodb@latest /Users/fsalaman/.npm/d3746d4c-mongodb-latest.lock
+52 silly lockFile 771f2547-passport-latest passport@latest
+53 verbose lock passport@latest /Users/fsalaman/.npm/771f2547-passport-latest.lock
+54 verbose cache add name="passport-local" spec="latest" args=["passport-local","latest"]
+55 verbose parsed url { protocol: null,
+55 verbose parsed url   slashes: null,
+55 verbose parsed url   auth: null,
+55 verbose parsed url   host: null,
+55 verbose parsed url   port: null,
+55 verbose parsed url   hostname: null,
+55 verbose parsed url   hash: null,
+55 verbose parsed url   search: null,
+55 verbose parsed url   query: null,
+55 verbose parsed url   pathname: 'latest',
+55 verbose parsed url   path: 'latest',
+55 verbose parsed url   href: 'latest' }
+56 verbose addNamed [ 'passport-local', 'latest' ]
+57 verbose addNamed [ null, null ]
+58 silly lockFile 00a116b3-passport-local-latest passport-local@latest
+59 verbose lock passport-local@latest /Users/fsalaman/.npm/00a116b3-passport-local-latest.lock
+60 verbose cache add [ 'nodemon@latest', null ]
+61 verbose cache add name=undefined spec="nodemon@latest" args=["nodemon@latest",null]
+62 verbose parsed url { protocol: null,
+62 verbose parsed url   slashes: null,
+62 verbose parsed url   auth: null,
+62 verbose parsed url   host: null,
+62 verbose parsed url   port: null,
+62 verbose parsed url   hostname: null,
+62 verbose parsed url   hash: null,
+62 verbose parsed url   search: null,
+62 verbose parsed url   query: null,
+62 verbose parsed url   pathname: 'nodemon@latest',
+62 verbose parsed url   path: 'nodemon@latest',
+62 verbose parsed url   href: 'nodemon@latest' }
+63 verbose cache add [ 'express-session@latest', null ]
+64 verbose cache add name=undefined spec="express-session@latest" args=["express-session@latest",null]
+65 verbose parsed url { protocol: null,
+65 verbose parsed url   slashes: null,
+65 verbose parsed url   auth: null,
+65 verbose parsed url   host: null,
+65 verbose parsed url   port: null,
+65 verbose parsed url   hostname: null,
+65 verbose parsed url   hash: null,
+65 verbose parsed url   search: null,
+65 verbose parsed url   query: null,
+65 verbose parsed url   pathname: 'express-session@latest',
+65 verbose parsed url   path: 'express-session@latest',
+65 verbose parsed url   href: 'express-session@latest' }
+66 verbose cache add [ 'connect-flash@latest', null ]
+67 verbose cache add name=undefined spec="connect-flash@latest" args=["connect-flash@latest",null]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: 'connect-flash@latest',
+68 verbose parsed url   path: 'connect-flash@latest',
+68 verbose parsed url   href: 'connect-flash@latest' }
+69 verbose cache add [ 'nodemailer@latest', null ]
+70 verbose cache add name=undefined spec="nodemailer@latest" args=["nodemailer@latest",null]
+71 verbose parsed url { protocol: null,
+71 verbose parsed url   slashes: null,
+71 verbose parsed url   auth: null,
+71 verbose parsed url   host: null,
+71 verbose parsed url   port: null,
+71 verbose parsed url   hostname: null,
+71 verbose parsed url   hash: null,
+71 verbose parsed url   search: null,
+71 verbose parsed url   query: null,
+71 verbose parsed url   pathname: 'nodemailer@latest',
+71 verbose parsed url   path: 'nodemailer@latest',
+71 verbose parsed url   href: 'nodemailer@latest' }
+72 verbose cache add name="passport-facebook" spec="latest" args=["passport-facebook","latest"]
+73 verbose parsed url { protocol: null,
+73 verbose parsed url   slashes: null,
+73 verbose parsed url   auth: null,
+73 verbose parsed url   host: null,
+73 verbose parsed url   port: null,
+73 verbose parsed url   hostname: null,
+73 verbose parsed url   hash: null,
+73 verbose parsed url   search: null,
+73 verbose parsed url   query: null,
+73 verbose parsed url   pathname: 'latest',
+73 verbose parsed url   path: 'latest',
+73 verbose parsed url   href: 'latest' }
+74 verbose addNamed [ 'passport-facebook', 'latest' ]
+75 verbose addNamed [ null, null ]
+76 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+77 verbose lock passport-facebook@latest /Users/fsalaman/.npm/82ca5952-passport-facebook-latest.lock
+78 verbose cache add name="multer" spec="latest" args=["multer","latest"]
+79 verbose parsed url { protocol: null,
+79 verbose parsed url   slashes: null,
+79 verbose parsed url   auth: null,
+79 verbose parsed url   host: null,
+79 verbose parsed url   port: null,
+79 verbose parsed url   hostname: null,
+79 verbose parsed url   hash: null,
+79 verbose parsed url   search: null,
+79 verbose parsed url   query: null,
+79 verbose parsed url   pathname: 'latest',
+79 verbose parsed url   path: 'latest',
+79 verbose parsed url   href: 'latest' }
+80 verbose addNamed [ 'multer', 'latest' ]
+81 verbose addNamed [ null, null ]
+82 silly lockFile ac32abbe-multer-latest multer@latest
+83 verbose lock multer@latest /Users/fsalaman/.npm/ac32abbe-multer-latest.lock
+84 verbose cache add [ 'nodemailer-smtp-transporter@latest', null ]
+85 verbose cache add name=undefined spec="nodemailer-smtp-transporter@latest" args=["nodemailer-smtp-transporter@latest",null]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: 'nodemailer-smtp-transporter@latest',
+86 verbose parsed url   path: 'nodemailer-smtp-transporter@latest',
+86 verbose parsed url   href: 'nodemailer-smtp-transporter@latest' }
+87 verbose cache add [ 'forever@latest', null ]
+88 verbose cache add name=undefined spec="forever@latest" args=["forever@latest",null]
+89 verbose parsed url { protocol: null,
+89 verbose parsed url   slashes: null,
+89 verbose parsed url   auth: null,
+89 verbose parsed url   host: null,
+89 verbose parsed url   port: null,
+89 verbose parsed url   hostname: null,
+89 verbose parsed url   hash: null,
+89 verbose parsed url   search: null,
+89 verbose parsed url   query: null,
+89 verbose parsed url   pathname: 'forever@latest',
+89 verbose parsed url   path: 'forever@latest',
+89 verbose parsed url   href: 'forever@latest' }
+90 verbose cache add [ 'body-parser@latest', null ]
+91 verbose cache add name=undefined spec="body-parser@latest" args=["body-parser@latest",null]
+92 verbose parsed url { protocol: null,
+92 verbose parsed url   slashes: null,
+92 verbose parsed url   auth: null,
+92 verbose parsed url   host: null,
+92 verbose parsed url   port: null,
+92 verbose parsed url   hostname: null,
+92 verbose parsed url   hash: null,
+92 verbose parsed url   search: null,
+92 verbose parsed url   query: null,
+92 verbose parsed url   pathname: 'body-parser@latest',
+92 verbose parsed url   path: 'body-parser@latest',
+92 verbose parsed url   href: 'body-parser@latest' }
+93 verbose cache add [ 'cookie-parser@latest', null ]
+94 verbose cache add name=undefined spec="cookie-parser@latest" args=["cookie-parser@latest",null]
+95 verbose parsed url { protocol: null,
+95 verbose parsed url   slashes: null,
+95 verbose parsed url   auth: null,
+95 verbose parsed url   host: null,
+95 verbose parsed url   port: null,
+95 verbose parsed url   hostname: null,
+95 verbose parsed url   hash: null,
+95 verbose parsed url   search: null,
+95 verbose parsed url   query: null,
+95 verbose parsed url   pathname: 'cookie-parser@latest',
+95 verbose parsed url   path: 'cookie-parser@latest',
+95 verbose parsed url   href: 'cookie-parser@latest' }
+96 verbose cache add [ 'debug@latest', null ]
+97 verbose cache add name=undefined spec="debug@latest" args=["debug@latest",null]
+98 verbose parsed url { protocol: null,
+98 verbose parsed url   slashes: null,
+98 verbose parsed url   auth: null,
+98 verbose parsed url   host: null,
+98 verbose parsed url   port: null,
+98 verbose parsed url   hostname: null,
+98 verbose parsed url   hash: null,
+98 verbose parsed url   search: null,
+98 verbose parsed url   query: null,
+98 verbose parsed url   pathname: 'debug@latest',
+98 verbose parsed url   path: 'debug@latest',
+98 verbose parsed url   href: 'debug@latest' }
+99 verbose cache add [ 'express@latest', null ]
+100 verbose cache add name=undefined spec="express@latest" args=["express@latest",null]
+101 verbose parsed url { protocol: null,
+101 verbose parsed url   slashes: null,
+101 verbose parsed url   auth: null,
+101 verbose parsed url   host: null,
+101 verbose parsed url   port: null,
+101 verbose parsed url   hostname: null,
+101 verbose parsed url   hash: null,
+101 verbose parsed url   search: null,
+101 verbose parsed url   query: null,
+101 verbose parsed url   pathname: 'express@latest',
+101 verbose parsed url   path: 'express@latest',
+101 verbose parsed url   href: 'express@latest' }
+102 verbose cache add [ 'serve-favicon@latest', null ]
+103 verbose cache add name=undefined spec="serve-favicon@latest" args=["serve-favicon@latest",null]
+104 verbose parsed url { protocol: null,
+104 verbose parsed url   slashes: null,
+104 verbose parsed url   auth: null,
+104 verbose parsed url   host: null,
+104 verbose parsed url   port: null,
+104 verbose parsed url   hostname: null,
+104 verbose parsed url   hash: null,
+104 verbose parsed url   search: null,
+104 verbose parsed url   query: null,
+104 verbose parsed url   pathname: 'serve-favicon@latest',
+104 verbose parsed url   path: 'serve-favicon@latest',
+104 verbose parsed url   href: 'serve-favicon@latest' }
+105 verbose cache add [ 'ejs@latest', null ]
+106 verbose cache add name=undefined spec="ejs@latest" args=["ejs@latest",null]
+107 verbose parsed url { protocol: null,
+107 verbose parsed url   slashes: null,
+107 verbose parsed url   auth: null,
+107 verbose parsed url   host: null,
+107 verbose parsed url   port: null,
+107 verbose parsed url   hostname: null,
+107 verbose parsed url   hash: null,
+107 verbose parsed url   search: null,
+107 verbose parsed url   query: null,
+107 verbose parsed url   pathname: 'ejs@latest',
+107 verbose parsed url   path: 'ejs@latest',
+107 verbose parsed url   href: 'ejs@latest' }
+108 verbose cache add name="nodemon" spec="latest" args=["nodemon","latest"]
+109 verbose parsed url { protocol: null,
+109 verbose parsed url   slashes: null,
+109 verbose parsed url   auth: null,
+109 verbose parsed url   host: null,
+109 verbose parsed url   port: null,
+109 verbose parsed url   hostname: null,
+109 verbose parsed url   hash: null,
+109 verbose parsed url   search: null,
+109 verbose parsed url   query: null,
+109 verbose parsed url   pathname: 'latest',
+109 verbose parsed url   path: 'latest',
+109 verbose parsed url   href: 'latest' }
+110 verbose addNamed [ 'nodemon', 'latest' ]
+111 verbose addNamed [ null, null ]
+112 silly lockFile 164666a5-nodemon-latest nodemon@latest
+113 verbose lock nodemon@latest /Users/fsalaman/.npm/164666a5-nodemon-latest.lock
+114 verbose cache add name="express-session" spec="latest" args=["express-session","latest"]
+115 verbose parsed url { protocol: null,
+115 verbose parsed url   slashes: null,
+115 verbose parsed url   auth: null,
+115 verbose parsed url   host: null,
+115 verbose parsed url   port: null,
+115 verbose parsed url   hostname: null,
+115 verbose parsed url   hash: null,
+115 verbose parsed url   search: null,
+115 verbose parsed url   query: null,
+115 verbose parsed url   pathname: 'latest',
+115 verbose parsed url   path: 'latest',
+115 verbose parsed url   href: 'latest' }
+116 verbose addNamed [ 'express-session', 'latest' ]
+117 verbose addNamed [ null, null ]
+118 silly lockFile fa47ee87-express-session-latest express-session@latest
+119 verbose lock express-session@latest /Users/fsalaman/.npm/fa47ee87-express-session-latest.lock
+120 verbose cache add name="connect-flash" spec="latest" args=["connect-flash","latest"]
+121 verbose parsed url { protocol: null,
+121 verbose parsed url   slashes: null,
+121 verbose parsed url   auth: null,
+121 verbose parsed url   host: null,
+121 verbose parsed url   port: null,
+121 verbose parsed url   hostname: null,
+121 verbose parsed url   hash: null,
+121 verbose parsed url   search: null,
+121 verbose parsed url   query: null,
+121 verbose parsed url   pathname: 'latest',
+121 verbose parsed url   path: 'latest',
+121 verbose parsed url   href: 'latest' }
+122 verbose addNamed [ 'connect-flash', 'latest' ]
+123 verbose addNamed [ null, null ]
+124 silly lockFile feedbc7e-connect-flash-latest connect-flash@latest
+125 verbose lock connect-flash@latest /Users/fsalaman/.npm/feedbc7e-connect-flash-latest.lock
+126 verbose cache add name="nodemailer" spec="latest" args=["nodemailer","latest"]
+127 verbose parsed url { protocol: null,
+127 verbose parsed url   slashes: null,
+127 verbose parsed url   auth: null,
+127 verbose parsed url   host: null,
+127 verbose parsed url   port: null,
+127 verbose parsed url   hostname: null,
+127 verbose parsed url   hash: null,
+127 verbose parsed url   search: null,
+127 verbose parsed url   query: null,
+127 verbose parsed url   pathname: 'latest',
+127 verbose parsed url   path: 'latest',
+127 verbose parsed url   href: 'latest' }
+128 verbose addNamed [ 'nodemailer', 'latest' ]
+129 verbose addNamed [ null, null ]
+130 silly lockFile 5c3b2bc0-nodemailer-latest nodemailer@latest
+131 verbose lock nodemailer@latest /Users/fsalaman/.npm/5c3b2bc0-nodemailer-latest.lock
+132 verbose cache add name="nodemailer-smtp-transporter" spec="latest" args=["nodemailer-smtp-transporter","latest"]
+133 verbose parsed url { protocol: null,
+133 verbose parsed url   slashes: null,
+133 verbose parsed url   auth: null,
+133 verbose parsed url   host: null,
+133 verbose parsed url   port: null,
+133 verbose parsed url   hostname: null,
+133 verbose parsed url   hash: null,
+133 verbose parsed url   search: null,
+133 verbose parsed url   query: null,
+133 verbose parsed url   pathname: 'latest',
+133 verbose parsed url   path: 'latest',
+133 verbose parsed url   href: 'latest' }
+134 verbose addNamed [ 'nodemailer-smtp-transporter', 'latest' ]
+135 verbose addNamed [ null, null ]
+136 silly lockFile 4b523de4-demailer-smtp-transporter-latest nodemailer-smtp-transporter@latest
+137 verbose lock nodemailer-smtp-transporter@latest /Users/fsalaman/.npm/4b523de4-demailer-smtp-transporter-latest.lock
+138 verbose cache add name="forever" spec="latest" args=["forever","latest"]
+139 verbose parsed url { protocol: null,
+139 verbose parsed url   slashes: null,
+139 verbose parsed url   auth: null,
+139 verbose parsed url   host: null,
+139 verbose parsed url   port: null,
+139 verbose parsed url   hostname: null,
+139 verbose parsed url   hash: null,
+139 verbose parsed url   search: null,
+139 verbose parsed url   query: null,
+139 verbose parsed url   pathname: 'latest',
+139 verbose parsed url   path: 'latest',
+139 verbose parsed url   href: 'latest' }
+140 verbose addNamed [ 'forever', 'latest' ]
+141 verbose addNamed [ null, null ]
+142 silly lockFile fac80c3d-forever-latest forever@latest
+143 verbose lock forever@latest /Users/fsalaman/.npm/fac80c3d-forever-latest.lock
+144 verbose cache add name="body-parser" spec="latest" args=["body-parser","latest"]
+145 verbose parsed url { protocol: null,
+145 verbose parsed url   slashes: null,
+145 verbose parsed url   auth: null,
+145 verbose parsed url   host: null,
+145 verbose parsed url   port: null,
+145 verbose parsed url   hostname: null,
+145 verbose parsed url   hash: null,
+145 verbose parsed url   search: null,
+145 verbose parsed url   query: null,
+145 verbose parsed url   pathname: 'latest',
+145 verbose parsed url   path: 'latest',
+145 verbose parsed url   href: 'latest' }
+146 verbose addNamed [ 'body-parser', 'latest' ]
+147 verbose addNamed [ null, null ]
+148 silly lockFile 88319797-body-parser-latest body-parser@latest
+149 verbose lock body-parser@latest /Users/fsalaman/.npm/88319797-body-parser-latest.lock
+150 verbose cache add name="cookie-parser" spec="latest" args=["cookie-parser","latest"]
+151 verbose parsed url { protocol: null,
+151 verbose parsed url   slashes: null,
+151 verbose parsed url   auth: null,
+151 verbose parsed url   host: null,
+151 verbose parsed url   port: null,
+151 verbose parsed url   hostname: null,
+151 verbose parsed url   hash: null,
+151 verbose parsed url   search: null,
+151 verbose parsed url   query: null,
+151 verbose parsed url   pathname: 'latest',
+151 verbose parsed url   path: 'latest',
+151 verbose parsed url   href: 'latest' }
+152 verbose addNamed [ 'cookie-parser', 'latest' ]
+153 verbose addNamed [ null, null ]
+154 silly lockFile a995bebb-cookie-parser-latest cookie-parser@latest
+155 verbose lock cookie-parser@latest /Users/fsalaman/.npm/a995bebb-cookie-parser-latest.lock
+156 verbose cache add name="debug" spec="latest" args=["debug","latest"]
+157 verbose parsed url { protocol: null,
+157 verbose parsed url   slashes: null,
+157 verbose parsed url   auth: null,
+157 verbose parsed url   host: null,
+157 verbose parsed url   port: null,
+157 verbose parsed url   hostname: null,
+157 verbose parsed url   hash: null,
+157 verbose parsed url   search: null,
+157 verbose parsed url   query: null,
+157 verbose parsed url   pathname: 'latest',
+157 verbose parsed url   path: 'latest',
+157 verbose parsed url   href: 'latest' }
+158 verbose addNamed [ 'debug', 'latest' ]
+159 verbose addNamed [ null, null ]
+160 silly lockFile 2281a8d9-debug-latest debug@latest
+161 verbose lock debug@latest /Users/fsalaman/.npm/2281a8d9-debug-latest.lock
+162 verbose cache add name="express" spec="latest" args=["express","latest"]
+163 verbose parsed url { protocol: null,
+163 verbose parsed url   slashes: null,
+163 verbose parsed url   auth: null,
+163 verbose parsed url   host: null,
+163 verbose parsed url   port: null,
+163 verbose parsed url   hostname: null,
+163 verbose parsed url   hash: null,
+163 verbose parsed url   search: null,
+163 verbose parsed url   query: null,
+163 verbose parsed url   pathname: 'latest',
+163 verbose parsed url   path: 'latest',
+163 verbose parsed url   href: 'latest' }
+164 verbose addNamed [ 'express', 'latest' ]
+165 verbose addNamed [ null, null ]
+166 silly lockFile c30a01ab-express-latest express@latest
+167 verbose lock express@latest /Users/fsalaman/.npm/c30a01ab-express-latest.lock
+168 info addNameTag [ 'mongoose', 'latest' ]
+169 verbose cache add name="serve-favicon" spec="latest" args=["serve-favicon","latest"]
+170 verbose parsed url { protocol: null,
+170 verbose parsed url   slashes: null,
+170 verbose parsed url   auth: null,
+170 verbose parsed url   host: null,
+170 verbose parsed url   port: null,
+170 verbose parsed url   hostname: null,
+170 verbose parsed url   hash: null,
+170 verbose parsed url   search: null,
+170 verbose parsed url   query: null,
+170 verbose parsed url   pathname: 'latest',
+170 verbose parsed url   path: 'latest',
+170 verbose parsed url   href: 'latest' }
+171 verbose addNamed [ 'serve-favicon', 'latest' ]
+172 verbose addNamed [ null, null ]
+173 silly lockFile 690db6aa-serve-favicon-latest serve-favicon@latest
+174 verbose lock serve-favicon@latest /Users/fsalaman/.npm/690db6aa-serve-favicon-latest.lock
+175 verbose cache add name="ejs" spec="latest" args=["ejs","latest"]
+176 verbose parsed url { protocol: null,
+176 verbose parsed url   slashes: null,
+176 verbose parsed url   auth: null,
+176 verbose parsed url   host: null,
+176 verbose parsed url   port: null,
+176 verbose parsed url   hostname: null,
+176 verbose parsed url   hash: null,
+176 verbose parsed url   search: null,
+176 verbose parsed url   query: null,
+176 verbose parsed url   pathname: 'latest',
+176 verbose parsed url   path: 'latest',
+176 verbose parsed url   href: 'latest' }
+177 verbose addNamed [ 'ejs', 'latest' ]
+178 verbose addNamed [ null, null ]
+179 silly lockFile 171e9c95-ejs-latest ejs@latest
+180 verbose lock ejs@latest /Users/fsalaman/.npm/171e9c95-ejs-latest.lock
+181 info addNameTag [ 'mongodb', 'latest' ]
+182 info addNameTag [ 'gridfs-stream', 'latest' ]
+183 info addNameTag [ 'passport', 'latest' ]
+184 info addNameTag [ 'passport-local', 'latest' ]
+185 info addNameTag [ 'nodemon', 'latest' ]
+186 info addNameTag [ 'passport-facebook', 'latest' ]
+187 info addNameTag [ 'multer', 'latest' ]
+188 info addNameTag [ 'express-session', 'latest' ]
+189 info addNameTag [ 'nodemailer', 'latest' ]
+190 info addNameTag [ 'connect-flash', 'latest' ]
+191 info addNameTag [ 'nodemailer-smtp-transporter', 'latest' ]
+192 info addNameTag [ 'cookie-parser', 'latest' ]
+193 info addNameTag [ 'body-parser', 'latest' ]
+194 info addNameTag [ 'forever', 'latest' ]
+195 info addNameTag [ 'express', 'latest' ]
+196 info addNameTag [ 'serve-favicon', 'latest' ]
+197 info addNameTag [ 'debug', 'latest' ]
+198 info addNameTag [ 'ejs', 'latest' ]
+199 verbose request where is /nodemailer-smtp-transporter
+200 verbose request registry https://registry.npmjs.org/
+201 verbose request id cf49a0c55741fd13
+202 verbose url raw /nodemailer-smtp-transporter
+203 verbose url resolving [ 'https://registry.npmjs.org/',
+203 verbose url resolving   './nodemailer-smtp-transporter' ]
+204 verbose url resolved https://registry.npmjs.org/nodemailer-smtp-transporter
+205 verbose request where is https://registry.npmjs.org/nodemailer-smtp-transporter
+206 info trying registry request attempt 1 at 23:52:39
+207 http GET https://registry.npmjs.org/nodemailer-smtp-transporter
+208 verbose request where is /mongoose
+209 verbose request registry https://registry.npmjs.org/
+210 verbose url raw /mongoose
+211 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+212 verbose url resolved https://registry.npmjs.org/mongoose
+213 verbose request where is https://registry.npmjs.org/mongoose
+214 info trying registry request attempt 1 at 23:52:39
+215 verbose etag "1WWI3QLHLS69RU5448HNWF3RD"
+216 http GET https://registry.npmjs.org/mongoose
+217 verbose request where is /mongodb
+218 verbose request registry https://registry.npmjs.org/
+219 verbose url raw /mongodb
+220 verbose url resolving [ 'https://registry.npmjs.org/', './mongodb' ]
+221 verbose url resolved https://registry.npmjs.org/mongodb
+222 verbose request where is https://registry.npmjs.org/mongodb
+223 info trying registry request attempt 1 at 23:52:39
+224 verbose etag "71AGBX3778NE893QU99B5V8YJ"
+225 http GET https://registry.npmjs.org/mongodb
+226 verbose request where is /passport
+227 verbose request registry https://registry.npmjs.org/
+228 verbose url raw /passport
+229 verbose url resolving [ 'https://registry.npmjs.org/', './passport' ]
+230 verbose url resolved https://registry.npmjs.org/passport
+231 verbose request where is https://registry.npmjs.org/passport
+232 info trying registry request attempt 1 at 23:52:39
+233 verbose etag "9ND9QASXPVWQFEK5QH83JJB"
+234 http GET https://registry.npmjs.org/passport
+235 verbose request where is /gridfs-stream
+236 verbose request registry https://registry.npmjs.org/
+237 verbose url raw /gridfs-stream
+238 verbose url resolving [ 'https://registry.npmjs.org/', './gridfs-stream' ]
+239 verbose url resolved https://registry.npmjs.org/gridfs-stream
+240 verbose request where is https://registry.npmjs.org/gridfs-stream
+241 info trying registry request attempt 1 at 23:52:39
+242 verbose etag "ELRGGP91CFVKZX9J8JM4KSZ09"
+243 http GET https://registry.npmjs.org/gridfs-stream
+244 verbose request where is /passport-local
+245 verbose request registry https://registry.npmjs.org/
+246 verbose url raw /passport-local
+247 verbose url resolving [ 'https://registry.npmjs.org/', './passport-local' ]
+248 verbose url resolved https://registry.npmjs.org/passport-local
+249 verbose request where is https://registry.npmjs.org/passport-local
+250 info trying registry request attempt 1 at 23:52:39
+251 verbose etag "7DN2POQUWPKIHVHPHGG5T1TP8"
+252 http GET https://registry.npmjs.org/passport-local
+253 verbose request where is /passport-facebook
+254 verbose request registry https://registry.npmjs.org/
+255 verbose url raw /passport-facebook
+256 verbose url resolving [ 'https://registry.npmjs.org/', './passport-facebook' ]
+257 verbose url resolved https://registry.npmjs.org/passport-facebook
+258 verbose request where is https://registry.npmjs.org/passport-facebook
+259 info trying registry request attempt 1 at 23:52:39
+260 verbose etag "2TZ6MPGGIQXI874YHFF3IA6PP"
+261 http GET https://registry.npmjs.org/passport-facebook
+262 verbose request where is /nodemon
+263 verbose request registry https://registry.npmjs.org/
+264 verbose url raw /nodemon
+265 verbose url resolving [ 'https://registry.npmjs.org/', './nodemon' ]
+266 verbose url resolved https://registry.npmjs.org/nodemon
+267 verbose request where is https://registry.npmjs.org/nodemon
+268 info trying registry request attempt 1 at 23:52:39
+269 verbose etag "EAUA72JDF5WN5GJXVPJU9COXL"
+270 http GET https://registry.npmjs.org/nodemon
+271 verbose request where is /multer
+272 verbose request registry https://registry.npmjs.org/
+273 verbose url raw /multer
+274 verbose url resolving [ 'https://registry.npmjs.org/', './multer' ]
+275 verbose url resolved https://registry.npmjs.org/multer
+276 verbose request where is https://registry.npmjs.org/multer
+277 info trying registry request attempt 1 at 23:52:39
+278 verbose etag "BC6IF9MC78EAL9194TYEFH6JM"
+279 http GET https://registry.npmjs.org/multer
+280 verbose request where is /connect-flash
+281 verbose request registry https://registry.npmjs.org/
+282 verbose url raw /connect-flash
+283 verbose url resolving [ 'https://registry.npmjs.org/', './connect-flash' ]
+284 verbose url resolved https://registry.npmjs.org/connect-flash
+285 verbose request where is https://registry.npmjs.org/connect-flash
+286 info trying registry request attempt 1 at 23:52:39
+287 verbose etag "DZL2MH1PMOBWV3JLPGHEZBI3N"
+288 http GET https://registry.npmjs.org/connect-flash
+289 verbose request where is /express-session
+290 verbose request registry https://registry.npmjs.org/
+291 verbose url raw /express-session
+292 verbose url resolving [ 'https://registry.npmjs.org/', './express-session' ]
+293 verbose url resolved https://registry.npmjs.org/express-session
+294 verbose request where is https://registry.npmjs.org/express-session
+295 info trying registry request attempt 1 at 23:52:39
+296 verbose etag "11GJW7ZDWFKJ96YG3VGCOWUV6"
+297 http GET https://registry.npmjs.org/express-session
+298 verbose request where is /forever
+299 verbose request registry https://registry.npmjs.org/
+300 verbose url raw /forever
+301 verbose url resolving [ 'https://registry.npmjs.org/', './forever' ]
+302 verbose url resolved https://registry.npmjs.org/forever
+303 verbose request where is https://registry.npmjs.org/forever
+304 info trying registry request attempt 1 at 23:52:39
+305 verbose etag "7PHHI76GNYIB87S0MTTOND09P"
+306 http GET https://registry.npmjs.org/forever
+307 verbose request where is /cookie-parser
+308 verbose request registry https://registry.npmjs.org/
+309 verbose url raw /cookie-parser
+310 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-parser' ]
+311 verbose url resolved https://registry.npmjs.org/cookie-parser
+312 verbose request where is https://registry.npmjs.org/cookie-parser
+313 info trying registry request attempt 1 at 23:52:39
+314 verbose etag "4W945W7U3U761FPWUN6PK3QU"
+315 http GET https://registry.npmjs.org/cookie-parser
+316 verbose request where is /body-parser
+317 verbose request registry https://registry.npmjs.org/
+318 verbose url raw /body-parser
+319 verbose url resolving [ 'https://registry.npmjs.org/', './body-parser' ]
+320 verbose url resolved https://registry.npmjs.org/body-parser
+321 verbose request where is https://registry.npmjs.org/body-parser
+322 info trying registry request attempt 1 at 23:52:39
+323 verbose etag "DWBM4KUFTBNOX8NY3JOMK21K4"
+324 http GET https://registry.npmjs.org/body-parser
+325 verbose request where is /serve-favicon
+326 verbose request registry https://registry.npmjs.org/
+327 verbose url raw /serve-favicon
+328 verbose url resolving [ 'https://registry.npmjs.org/', './serve-favicon' ]
+329 verbose url resolved https://registry.npmjs.org/serve-favicon
+330 verbose request where is https://registry.npmjs.org/serve-favicon
+331 info trying registry request attempt 1 at 23:52:39
+332 verbose etag "ELTIK8M1S4WYMWOJY41YANM5S"
+333 http GET https://registry.npmjs.org/serve-favicon
+334 verbose request where is /nodemailer
+335 verbose request registry https://registry.npmjs.org/
+336 verbose url raw /nodemailer
+337 verbose url resolving [ 'https://registry.npmjs.org/', './nodemailer' ]
+338 verbose url resolved https://registry.npmjs.org/nodemailer
+339 verbose request where is https://registry.npmjs.org/nodemailer
+340 info trying registry request attempt 1 at 23:52:40
+341 verbose etag "EJWT5M0RHA8QXQD36N1S08SP2"
+342 http GET https://registry.npmjs.org/nodemailer
+343 verbose request where is /express
+344 verbose request registry https://registry.npmjs.org/
+345 verbose url raw /express
+346 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+347 verbose url resolved https://registry.npmjs.org/express
+348 verbose request where is https://registry.npmjs.org/express
+349 info trying registry request attempt 1 at 23:52:40
+350 verbose etag "5AVV7QUJ21DRWZOU33HOUV06A"
+351 http GET https://registry.npmjs.org/express
+352 verbose request where is /ejs
+353 verbose request registry https://registry.npmjs.org/
+354 verbose url raw /ejs
+355 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
+356 verbose url resolved https://registry.npmjs.org/ejs
+357 verbose request where is https://registry.npmjs.org/ejs
+358 info trying registry request attempt 1 at 23:52:40
+359 verbose etag "C4T8LR7ICLLVB7GIUP2SCMDBM"
+360 http GET https://registry.npmjs.org/ejs
+361 verbose request where is /debug
+362 verbose request registry https://registry.npmjs.org/
+363 verbose url raw /debug
+364 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+365 verbose url resolved https://registry.npmjs.org/debug
+366 verbose request where is https://registry.npmjs.org/debug
+367 info trying registry request attempt 1 at 23:52:40
+368 verbose etag "17GB1O36P188C5YVCIXLIU5GI"
+369 http GET https://registry.npmjs.org/debug
+370 http 200 https://registry.npmjs.org/passport
+371 silly registry.get cb [ 200,
+371 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+371 silly registry.get     etag: '"F2OR2UD15LA6CYX7424OIBAAS"',
+371 silly registry.get     'content-type': 'application/json',
+371 silly registry.get     'cache-control': 'max-age=300',
+371 silly registry.get     'content-length': '41597',
+371 silly registry.get     'accept-ranges': 'bytes',
+371 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+371 silly registry.get     via: '1.1 varnish',
+371 silly registry.get     age: '14',
+371 silly registry.get     connection: 'keep-alive',
+371 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
+371 silly registry.get     'x-cache': 'HIT',
+371 silly registry.get     'x-cache-hits': '1',
+371 silly registry.get     'x-timer': 'S1449899560.698582,VS0,VE0',
+371 silly registry.get     vary: 'Accept' } ]
+372 verbose addNamed [ 'passport', '0.3.2' ]
+373 verbose addNamed [ '0.3.2', '0.3.2' ]
+374 silly lockFile 0030c36f-passport-0-3-2 passport@0.3.2
+375 verbose lock passport@0.3.2 /Users/fsalaman/.npm/0030c36f-passport-0-3-2.lock
+376 http 304 https://registry.npmjs.org/passport-local
+377 silly registry.get cb [ 304,
+377 silly registry.get   { date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+377 silly registry.get     via: '1.1 varnish',
+377 silly registry.get     'cache-control': 'max-age=300',
+377 silly registry.get     etag: '"7DN2POQUWPKIHVHPHGG5T1TP8"',
+377 silly registry.get     age: '14',
+377 silly registry.get     connection: 'keep-alive',
+377 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
+377 silly registry.get     'x-cache': 'HIT',
+377 silly registry.get     'x-cache-hits': '1',
+377 silly registry.get     'x-timer': 'S1449899560.818083,VS0,VE0',
+377 silly registry.get     vary: 'Accept' } ]
+378 verbose etag https://registry.npmjs.org/passport-local from cache
+379 verbose addNamed [ 'passport-local', '1.0.0' ]
+380 verbose addNamed [ '1.0.0', '1.0.0' ]
+381 silly lockFile 8defd22e-passport-local-1-0-0 passport-local@1.0.0
+382 verbose lock passport-local@1.0.0 /Users/fsalaman/.npm/8defd22e-passport-local-1-0-0.lock
+383 silly lockFile 0030c36f-passport-0-3-2 passport@0.3.2
+384 silly lockFile 0030c36f-passport-0-3-2 passport@0.3.2
+385 silly lockFile 771f2547-passport-latest passport@latest
+386 silly lockFile 771f2547-passport-latest passport@latest
+387 http 404 https://registry.npmjs.org/nodemailer-smtp-transporter
+388 silly registry.get cb [ 404,
+388 silly registry.get   { 'content-type': 'application/json',
+388 silly registry.get     'cache-control': 'max-age=0',
+388 silly registry.get     'content-length': '2',
+388 silly registry.get     'accept-ranges': 'bytes',
+388 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+388 silly registry.get     via: '1.1 varnish',
+388 silly registry.get     age: '0',
+388 silly registry.get     connection: 'keep-alive',
+388 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+388 silly registry.get     'x-cache': 'MISS',
+388 silly registry.get     'x-cache-hits': '0',
+388 silly registry.get     'x-timer': 'S1449899560.704270,VS0,VE188' } ]
+389 silly lockFile 8defd22e-passport-local-1-0-0 passport-local@1.0.0
+390 silly lockFile 8defd22e-passport-local-1-0-0 passport-local@1.0.0
+391 silly lockFile 00a116b3-passport-local-latest passport-local@latest
+392 silly lockFile 00a116b3-passport-local-latest passport-local@latest
+393 info already installed passport@0.3.2
+394 silly lockFile 4b523de4-demailer-smtp-transporter-latest nodemailer-smtp-transporter@latest
+395 silly lockFile 4b523de4-demailer-smtp-transporter-latest nodemailer-smtp-transporter@latest
+396 info already installed passport-local@1.0.0
+397 http 200 https://registry.npmjs.org/gridfs-stream
+398 silly registry.get cb [ 200,
+398 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+398 silly registry.get     etag: '"13Y62WBHKO9VVSPMZ70D68XM8"',
+398 silly registry.get     'content-type': 'application/json',
+398 silly registry.get     'cache-control': 'max-age=300',
+398 silly registry.get     'content-length': '26995',
+398 silly registry.get     'accept-ranges': 'bytes',
+398 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+398 silly registry.get     via: '1.1 varnish',
+398 silly registry.get     age: '0',
+398 silly registry.get     connection: 'keep-alive',
+398 silly registry.get     'x-served-by': 'cache-dfw1830-DFW',
+398 silly registry.get     'x-cache': 'MISS',
+398 silly registry.get     'x-cache-hits': '0',
+398 silly registry.get     'x-timer': 'S1449899560.706116,VS0,VE191',
+398 silly registry.get     vary: 'Accept' } ]
+399 verbose addNamed [ 'gridfs-stream', '1.1.1' ]
+400 verbose addNamed [ '1.1.1', '1.1.1' ]
+401 silly lockFile d52755e6-gridfs-stream-1-1-1 gridfs-stream@1.1.1
+402 verbose lock gridfs-stream@1.1.1 /Users/fsalaman/.npm/d52755e6-gridfs-stream-1-1-1.lock
+403 silly lockFile d52755e6-gridfs-stream-1-1-1 gridfs-stream@1.1.1
+404 silly lockFile d52755e6-gridfs-stream-1-1-1 gridfs-stream@1.1.1
+405 silly lockFile 7d4c030f-gridfs-stream-latest gridfs-stream@latest
+406 silly lockFile 7d4c030f-gridfs-stream-latest gridfs-stream@latest
+407 info already installed gridfs-stream@1.1.1
+408 http 200 https://registry.npmjs.org/multer
+409 silly registry.get cb [ 200,
+409 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+409 silly registry.get     etag: '"24E6029A7OBGYFCUVXCE4BMJG"',
+409 silly registry.get     'content-type': 'application/json',
+409 silly registry.get     'cache-control': 'max-age=300',
+409 silly registry.get     'content-length': '42836',
+409 silly registry.get     'accept-ranges': 'bytes',
+409 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+409 silly registry.get     via: '1.1 varnish',
+409 silly registry.get     age: '0',
+409 silly registry.get     connection: 'keep-alive',
+409 silly registry.get     'x-served-by': 'cache-dfw1830-DFW',
+409 silly registry.get     'x-cache': 'HIT',
+409 silly registry.get     'x-cache-hits': '1',
+409 silly registry.get     'x-timer': 'S1449899561.003856,VS0,VE73',
+409 silly registry.get     vary: 'Accept' } ]
+410 http 304 https://registry.npmjs.org/passport-facebook
+411 silly registry.get cb [ 304,
+411 silly registry.get   { date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+411 silly registry.get     via: '1.1 varnish',
+411 silly registry.get     'cache-control': 'max-age=300',
+411 silly registry.get     etag: '"2TZ6MPGGIQXI874YHFF3IA6PP"',
+411 silly registry.get     age: '0',
+411 silly registry.get     connection: 'keep-alive',
+411 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
+411 silly registry.get     'x-cache': 'HIT',
+411 silly registry.get     'x-cache-hits': '1',
+411 silly registry.get     'x-timer': 'S1449899560.871478,VS0,VE298',
+411 silly registry.get     vary: 'Accept' } ]
+412 verbose etag https://registry.npmjs.org/passport-facebook from cache
+413 verbose addNamed [ 'multer', '1.1.0' ]
+414 verbose addNamed [ '1.1.0', '1.1.0' ]
+415 silly lockFile 06aca17f-multer-1-1-0 multer@1.1.0
+416 verbose lock multer@1.1.0 /Users/fsalaman/.npm/06aca17f-multer-1-1-0.lock
+417 verbose addNamed [ 'passport-facebook', '2.0.0' ]
+418 verbose addNamed [ '2.0.0', '2.0.0' ]
+419 silly lockFile 747c92ab-passport-facebook-2-0-0 passport-facebook@2.0.0
+420 verbose lock passport-facebook@2.0.0 /Users/fsalaman/.npm/747c92ab-passport-facebook-2-0-0.lock
+421 silly lockFile 06aca17f-multer-1-1-0 multer@1.1.0
+422 silly lockFile 06aca17f-multer-1-1-0 multer@1.1.0
+423 silly lockFile 747c92ab-passport-facebook-2-0-0 passport-facebook@2.0.0
+424 silly lockFile 747c92ab-passport-facebook-2-0-0 passport-facebook@2.0.0
+425 silly lockFile ac32abbe-multer-latest multer@latest
+426 silly lockFile ac32abbe-multer-latest multer@latest
+427 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+428 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+429 info already installed passport-facebook@2.0.0
+430 info already installed multer@1.1.0
+431 http 200 https://registry.npmjs.org/mongoose
+432 silly registry.get cb [ 200,
+432 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+432 silly registry.get     etag: '"99YKE57YJUZRWLWIVZUUOWD07"',
+432 silly registry.get     'content-type': 'application/json',
+432 silly registry.get     'cache-control': 'max-age=300',
+432 silly registry.get     'content-length': '402479',
+432 silly registry.get     'accept-ranges': 'bytes',
+432 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+432 silly registry.get     via: '1.1 varnish',
+432 silly registry.get     age: '278',
+432 silly registry.get     connection: 'keep-alive',
+432 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+432 silly registry.get     'x-cache': 'HIT',
+432 silly registry.get     'x-cache-hits': '1',
+432 silly registry.get     'x-timer': 'S1449899560.704342,VS0,VE1',
+432 silly registry.get     vary: 'Accept' } ]
+433 http 200 https://registry.npmjs.org/nodemon
+434 silly registry.get cb [ 200,
+434 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+434 silly registry.get     etag: '"4Y28SBUSULCR33FEYSZYUE81Y"',
+434 silly registry.get     'content-type': 'application/json',
+434 silly registry.get     'cache-control': 'max-age=300',
+434 silly registry.get     'content-length': '181643',
+434 silly registry.get     'accept-ranges': 'bytes',
+434 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+434 silly registry.get     via: '1.1 varnish',
+434 silly registry.get     age: '0',
+434 silly registry.get     connection: 'keep-alive',
+434 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+434 silly registry.get     'x-cache': 'HIT',
+434 silly registry.get     'x-cache-hits': '1',
+434 silly registry.get     'x-timer': 'S1449899560.944119,VS0,VE84',
+434 silly registry.get     vary: 'Accept' } ]
+435 http 200 https://registry.npmjs.org/mongodb
+436 silly registry.get cb [ 200,
+436 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+436 silly registry.get     etag: '"1L2HMHDV0GA9P2HN3OGW3N0CU"',
+436 silly registry.get     'content-type': 'application/json',
+436 silly registry.get     'cache-control': 'max-age=300',
+436 silly registry.get     'content-length': '492820',
+436 silly registry.get     'accept-ranges': 'bytes',
+436 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:40 GMT',
+436 silly registry.get     via: '1.1 varnish',
+436 silly registry.get     age: '8',
+436 silly registry.get     connection: 'keep-alive',
+436 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+436 silly registry.get     'x-cache': 'HIT',
+436 silly registry.get     'x-cache-hits': '1',
+436 silly registry.get     'x-timer': 'S1449899560.704366,VS0,VE2',
+436 silly registry.get     vary: 'Accept' } ]
+437 http 200 https://registry.npmjs.org/express-session
+438 silly registry.get cb [ 200,
+438 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+438 silly registry.get     etag: '"BZZRKDWCB7N0CPLO206WF3QXP"',
+438 silly registry.get     'content-type': 'application/json',
+438 silly registry.get     'cache-control': 'max-age=300',
+438 silly registry.get     'content-length': '96403',
+438 silly registry.get     'accept-ranges': 'bytes',
+438 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+438 silly registry.get     via: '1.1 varnish',
+438 silly registry.get     age: '38',
+438 silly registry.get     connection: 'keep-alive',
+438 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
+438 silly registry.get     'x-cache': 'HIT',
+438 silly registry.get     'x-cache-hits': '1',
+438 silly registry.get     'x-timer': 'S1449899561.269045,VS0,VE0',
+438 silly registry.get     vary: 'Accept' } ]
+439 verbose addNamed [ 'mongoose', '4.3.1' ]
+440 verbose addNamed [ '4.3.1', '4.3.1' ]
+441 silly lockFile 71604e0d-mongoose-4-3-1 mongoose@4.3.1
+442 verbose lock mongoose@4.3.1 /Users/fsalaman/.npm/71604e0d-mongoose-4-3-1.lock
+443 verbose addNamed [ 'mongodb', '2.1.0' ]
+444 verbose addNamed [ '2.1.0', '2.1.0' ]
+445 silly lockFile 6b7a726c-mongodb-2-1-0 mongodb@2.1.0
+446 verbose lock mongodb@2.1.0 /Users/fsalaman/.npm/6b7a726c-mongodb-2-1-0.lock
+447 verbose addNamed [ 'nodemon', '1.8.1' ]
+448 verbose addNamed [ '1.8.1', '1.8.1' ]
+449 silly lockFile d418affa-nodemon-1-8-1 nodemon@1.8.1
+450 verbose lock nodemon@1.8.1 /Users/fsalaman/.npm/d418affa-nodemon-1-8-1.lock
+451 verbose addNamed [ 'express-session', '1.12.1' ]
+452 verbose addNamed [ '1.12.1', '1.12.1' ]
+453 silly lockFile 572c00aa-express-session-1-12-1 express-session@1.12.1
+454 verbose lock express-session@1.12.1 /Users/fsalaman/.npm/572c00aa-express-session-1-12-1.lock
+455 silly lockFile 25c3f696-js-org-mongodb-mongodb-2-1-0-tgz https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz
+456 verbose lock https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz /Users/fsalaman/.npm/25c3f696-js-org-mongodb-mongodb-2-1-0-tgz.lock
+457 http 200 https://registry.npmjs.org/cookie-parser
+458 silly registry.get cb [ 200,
+458 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+458 silly registry.get     etag: '"37SWG7O41OY70OSSKGDUF15YE"',
+458 silly registry.get     'content-type': 'application/json',
+458 silly registry.get     'cache-control': 'max-age=300',
+458 silly registry.get     'content-length': '20326',
+458 silly registry.get     'accept-ranges': 'bytes',
+458 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+458 silly registry.get     via: '1.1 varnish',
+458 silly registry.get     age: '15',
+458 silly registry.get     connection: 'keep-alive',
+458 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+458 silly registry.get     'x-cache': 'HIT',
+458 silly registry.get     'x-cache-hits': '2',
+458 silly registry.get     'x-timer': 'S1449899561.446644,VS0,VE0',
+458 silly registry.get     vary: 'Accept' } ]
+459 http 304 https://registry.npmjs.org/serve-favicon
+460 silly registry.get cb [ 304,
+460 silly registry.get   { date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+460 silly registry.get     via: '1.1 varnish',
+460 silly registry.get     'cache-control': 'max-age=300',
+460 silly registry.get     etag: '"ELTIK8M1S4WYMWOJY41YANM5S"',
+460 silly registry.get     age: '158',
+460 silly registry.get     connection: 'keep-alive',
+460 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
+460 silly registry.get     'x-cache': 'HIT',
+460 silly registry.get     'x-cache-hits': '1',
+460 silly registry.get     'x-timer': 'S1449899561.495530,VS0,VE0',
+460 silly registry.get     vary: 'Accept' } ]
+461 verbose etag https://registry.npmjs.org/serve-favicon from cache
+462 silly lockFile b23a2e0a--org-mongoose-mongoose-4-3-1-tgz https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz
+463 verbose lock https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz /Users/fsalaman/.npm/b23a2e0a--org-mongoose-mongoose-4-3-1-tgz.lock
+464 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz',
+464 verbose addRemoteTarball   '5054abdcd09963f5dcfc8c3eb8f3c56180fe1476' ]
+465 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz',
+465 verbose addRemoteTarball   'cd818f8db4ef3b02d86d83713bdd7f779e5cbe14' ]
+466 http 200 https://registry.npmjs.org/forever
+467 silly registry.get cb [ 200,
+467 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+467 silly registry.get     etag: '"BHV744GPXZOXV5HNCBIW77UPE"',
+467 silly registry.get     'content-type': 'application/json',
+467 silly registry.get     'cache-control': 'max-age=300',
+467 silly registry.get     'content-length': '83735',
+467 silly registry.get     'accept-ranges': 'bytes',
+467 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+467 silly registry.get     via: '1.1 varnish',
+467 silly registry.get     age: '71',
+467 silly registry.get     connection: 'keep-alive',
+467 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+467 silly registry.get     'x-cache': 'HIT',
+467 silly registry.get     'x-cache-hits': '1',
+467 silly registry.get     'x-timer': 'S1449899561.442116,VS0,VE0',
+467 silly registry.get     vary: 'Accept' } ]
+468 info retry fetch attempt 1 at 23:52:41
+469 verbose fetch to= /var/folders/yr/y4th8g6j2cz993v7vf4z1qd80000gn/T/npm-17427-6ncHVnmk/registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz
+470 silly lockFile d418affa-nodemon-1-8-1 nodemon@1.8.1
+471 silly lockFile d418affa-nodemon-1-8-1 nodemon@1.8.1
+472 verbose addNamed [ 'cookie-parser', '1.4.0' ]
+473 verbose addNamed [ '1.4.0', '1.4.0' ]
+474 silly lockFile 4a3a7453-cookie-parser-1-4-0 cookie-parser@1.4.0
+475 verbose lock cookie-parser@1.4.0 /Users/fsalaman/.npm/4a3a7453-cookie-parser-1-4-0.lock
+476 verbose addNamed [ 'serve-favicon', '2.3.0' ]
+477 verbose addNamed [ '2.3.0', '2.3.0' ]
+478 silly lockFile d210d889-serve-favicon-2-3-0 serve-favicon@2.3.0
+479 verbose lock serve-favicon@2.3.0 /Users/fsalaman/.npm/d210d889-serve-favicon-2-3-0.lock
+480 silly lockFile 164666a5-nodemon-latest nodemon@latest
+481 silly lockFile 164666a5-nodemon-latest nodemon@latest
+482 info retry fetch attempt 1 at 23:52:41
+483 verbose fetch to= /var/folders/yr/y4th8g6j2cz993v7vf4z1qd80000gn/T/npm-17427-6ncHVnmk/registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz
+484 http GET https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz
+485 http GET https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz
+486 verbose addNamed [ 'forever', '0.15.1' ]
+487 verbose addNamed [ '0.15.1', '0.15.1' ]
+488 silly lockFile dc7fb2a6-forever-0-15-1 forever@0.15.1
+489 verbose lock forever@0.15.1 /Users/fsalaman/.npm/dc7fb2a6-forever-0-15-1.lock
+490 silly lockFile 572c00aa-express-session-1-12-1 express-session@1.12.1
+491 silly lockFile 572c00aa-express-session-1-12-1 express-session@1.12.1
+492 silly lockFile fa47ee87-express-session-latest express-session@latest
+493 silly lockFile fa47ee87-express-session-latest express-session@latest
+494 silly lockFile 4a3a7453-cookie-parser-1-4-0 cookie-parser@1.4.0
+495 silly lockFile 4a3a7453-cookie-parser-1-4-0 cookie-parser@1.4.0
+496 silly lockFile a995bebb-cookie-parser-latest cookie-parser@latest
+497 silly lockFile a995bebb-cookie-parser-latest cookie-parser@latest
+498 http 200 https://registry.npmjs.org/body-parser
+499 silly registry.get cb [ 200,
+499 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+499 silly registry.get     etag: '"3KNU3WZJ7F0F2WKSGUM4R6N4G"',
+499 silly registry.get     'content-type': 'application/json',
+499 silly registry.get     'cache-control': 'max-age=60',
+499 silly registry.get     'content-length': '111016',
+499 silly registry.get     'accept-ranges': 'bytes',
+499 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+499 silly registry.get     via: '1.1 varnish',
+499 silly registry.get     age: '15',
+499 silly registry.get     connection: 'keep-alive',
+499 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+499 silly registry.get     'x-cache': 'HIT',
+499 silly registry.get     'x-cache-hits': '1',
+499 silly registry.get     'x-timer': 'S1449899561.487909,VS0,VE0',
+499 silly registry.get     vary: 'Accept' } ]
+500 http 304 https://registry.npmjs.org/connect-flash
+501 silly registry.get cb [ 304,
+501 silly registry.get   { date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+501 silly registry.get     via: '1.1 varnish',
+501 silly registry.get     'cache-control': 'max-age=300',
+501 silly registry.get     etag: '"DZL2MH1PMOBWV3JLPGHEZBI3N"',
+501 silly registry.get     age: '0',
+501 silly registry.get     connection: 'keep-alive',
+501 silly registry.get     'x-served-by': 'cache-dfw1830-DFW',
+501 silly registry.get     'x-cache': 'HIT',
+501 silly registry.get     'x-cache-hits': '1',
+501 silly registry.get     'x-timer': 'S1449899561.269823,VS0,VE300',
+501 silly registry.get     vary: 'Accept' } ]
+502 verbose etag https://registry.npmjs.org/connect-flash from cache
+503 info already installed nodemon@1.8.1
+504 silly lockFile d210d889-serve-favicon-2-3-0 serve-favicon@2.3.0
+505 silly lockFile d210d889-serve-favicon-2-3-0 serve-favicon@2.3.0
+506 silly lockFile 690db6aa-serve-favicon-latest serve-favicon@latest
+507 silly lockFile 690db6aa-serve-favicon-latest serve-favicon@latest
+508 verbose addNamed [ 'connect-flash', '0.1.1' ]
+509 verbose addNamed [ '0.1.1', '0.1.1' ]
+510 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+511 verbose lock connect-flash@0.1.1 /Users/fsalaman/.npm/0cdf4f98-connect-flash-0-1-1.lock
+512 verbose addNamed [ 'body-parser', '1.14.1' ]
+513 verbose addNamed [ '1.14.1', '1.14.1' ]
+514 silly lockFile 37e3018c-body-parser-1-14-1 body-parser@1.14.1
+515 verbose lock body-parser@1.14.1 /Users/fsalaman/.npm/37e3018c-body-parser-1-14-1.lock
+516 info already installed express-session@1.12.1
+517 info already installed cookie-parser@1.4.0
+518 silly lockFile dc7fb2a6-forever-0-15-1 forever@0.15.1
+519 silly lockFile dc7fb2a6-forever-0-15-1 forever@0.15.1
+520 silly lockFile fac80c3d-forever-latest forever@latest
+521 silly lockFile fac80c3d-forever-latest forever@latest
+522 http 200 https://registry.npmjs.org/ejs
+523 silly registry.get cb [ 200,
+523 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+523 silly registry.get     etag: '"SGH17UTLP6TT7QJ94LMB1QWO"',
+523 silly registry.get     'content-type': 'application/json',
+523 silly registry.get     'cache-control': 'max-age=60',
+523 silly registry.get     'content-length': '50240',
+523 silly registry.get     'accept-ranges': 'bytes',
+523 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+523 silly registry.get     via: '1.1 varnish',
+523 silly registry.get     age: '39',
+523 silly registry.get     connection: 'keep-alive',
+523 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+523 silly registry.get     'x-cache': 'HIT',
+523 silly registry.get     'x-cache-hits': '1',
+523 silly registry.get     'x-timer': 'S1449899561.600034,VS0,VE0',
+523 silly registry.get     vary: 'Accept' } ]
+524 info already installed serve-favicon@2.3.0
+525 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+526 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+527 silly lockFile feedbc7e-connect-flash-latest connect-flash@latest
+528 silly lockFile feedbc7e-connect-flash-latest connect-flash@latest
+529 verbose addNamed [ 'ejs', '2.3.4' ]
+530 verbose addNamed [ '2.3.4', '2.3.4' ]
+531 silly lockFile 7d57aeaf-ejs-2-3-4 ejs@2.3.4
+532 verbose lock ejs@2.3.4 /Users/fsalaman/.npm/7d57aeaf-ejs-2-3-4.lock
+533 info already installed forever@0.15.1
+534 silly lockFile 37e3018c-body-parser-1-14-1 body-parser@1.14.1
+535 silly lockFile 37e3018c-body-parser-1-14-1 body-parser@1.14.1
+536 silly lockFile 88319797-body-parser-latest body-parser@latest
+537 silly lockFile 88319797-body-parser-latest body-parser@latest
+538 http 200 https://registry.npmjs.org/debug
+539 silly registry.get cb [ 200,
+539 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+539 silly registry.get     etag: '"AXGFGLZ6LMZRQEA1RSIDNZPR6"',
+539 silly registry.get     'content-type': 'application/json',
+539 silly registry.get     'cache-control': 'max-age=300',
+539 silly registry.get     'content-length': '35989',
+539 silly registry.get     'accept-ranges': 'bytes',
+539 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+539 silly registry.get     via: '1.1 varnish',
+539 silly registry.get     age: '26',
+539 silly registry.get     connection: 'keep-alive',
+539 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+539 silly registry.get     'x-cache': 'HIT',
+539 silly registry.get     'x-cache-hits': '1',
+539 silly registry.get     'x-timer': 'S1449899561.651536,VS0,VE0',
+539 silly registry.get     vary: 'Accept' } ]
+540 verbose addNamed [ 'debug', '2.2.0' ]
+541 verbose addNamed [ '2.2.0', '2.2.0' ]
+542 silly lockFile 82f99b48-debug-2-2-0 debug@2.2.0
+543 verbose lock debug@2.2.0 /Users/fsalaman/.npm/82f99b48-debug-2-2-0.lock
+544 silly lockFile 7d57aeaf-ejs-2-3-4 ejs@2.3.4
+545 silly lockFile 7d57aeaf-ejs-2-3-4 ejs@2.3.4
+546 silly lockFile 171e9c95-ejs-latest ejs@latest
+547 silly lockFile 171e9c95-ejs-latest ejs@latest
+548 info already installed connect-flash@0.1.1
+549 info already installed body-parser@1.14.1
+550 info already installed ejs@2.3.4
+551 silly lockFile 82f99b48-debug-2-2-0 debug@2.2.0
+552 silly lockFile 82f99b48-debug-2-2-0 debug@2.2.0
+553 silly lockFile 2281a8d9-debug-latest debug@latest
+554 silly lockFile 2281a8d9-debug-latest debug@latest
+555 info already installed debug@2.2.0
+556 http 200 https://registry.npmjs.org/nodemailer
+557 silly registry.get cb [ 200,
+557 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+557 silly registry.get     etag: '"4V9D5CWC7XR7O1RIFHP77MS5X"',
+557 silly registry.get     'content-type': 'application/json',
+557 silly registry.get     'cache-control': 'max-age=300',
+557 silly registry.get     'content-length': '178265',
+557 silly registry.get     'accept-ranges': 'bytes',
+557 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+557 silly registry.get     via: '1.1 varnish',
+557 silly registry.get     age: '221',
+557 silly registry.get     connection: 'keep-alive',
+557 silly registry.get     'x-served-by': 'cache-dfw1832-DFW',
+557 silly registry.get     'x-cache': 'HIT',
+557 silly registry.get     'x-cache-hits': '1',
+557 silly registry.get     'x-timer': 'S1449899561.565758,VS0,VE0',
+557 silly registry.get     vary: 'Accept' } ]
+558 verbose addNamed [ 'nodemailer', '1.10.0' ]
+559 verbose addNamed [ '1.10.0', '1.10.0' ]
+560 silly lockFile d775a011-nodemailer-1-10-0 nodemailer@1.10.0
+561 verbose lock nodemailer@1.10.0 /Users/fsalaman/.npm/d775a011-nodemailer-1-10-0.lock
+562 silly lockFile d775a011-nodemailer-1-10-0 nodemailer@1.10.0
+563 silly lockFile d775a011-nodemailer-1-10-0 nodemailer@1.10.0
+564 silly lockFile 5c3b2bc0-nodemailer-latest nodemailer@latest
+565 silly lockFile 5c3b2bc0-nodemailer-latest nodemailer@latest
+566 info already installed nodemailer@1.10.0
+567 http 200 https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz
+568 http 200 https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz
+569 http 200 https://registry.npmjs.org/express
+570 silly registry.get cb [ 200,
+570 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+570 silly registry.get     etag: '"EXT126Q8F1CG5SB6BX30A2XF7"',
+570 silly registry.get     'content-type': 'application/json',
+570 silly registry.get     'cache-control': 'max-age=300',
+570 silly registry.get     'content-length': '528942',
+570 silly registry.get     'accept-ranges': 'bytes',
+570 silly registry.get     date: 'Sat, 12 Dec 2015 05:52:41 GMT',
+570 silly registry.get     via: '1.1 varnish',
+570 silly registry.get     age: '15',
+570 silly registry.get     connection: 'keep-alive',
+570 silly registry.get     'x-served-by': 'cache-dfw1833-DFW',
+570 silly registry.get     'x-cache': 'HIT',
+570 silly registry.get     'x-cache-hits': '1',
+570 silly registry.get     'x-timer': 'S1449899561.572359,VS0,VE1',
+570 silly registry.get     vary: 'Accept' } ]
+571 verbose addNamed [ 'express', '4.13.3' ]
+572 verbose addNamed [ '4.13.3', '4.13.3' ]
+573 silly lockFile 51f1744e-express-4-13-3 express@4.13.3
+574 verbose lock express@4.13.3 /Users/fsalaman/.npm/51f1744e-express-4-13-3.lock
+575 silly lockFile 51f1744e-express-4-13-3 express@4.13.3
+576 silly lockFile 51f1744e-express-4-13-3 express@4.13.3
+577 silly lockFile c30a01ab-express-latest express@latest
+578 silly lockFile c30a01ab-express-latest express@latest
+579 silly lockFile 25c3f696-js-org-mongodb-mongodb-2-1-0-tgz https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz
+580 silly lockFile 25c3f696-js-org-mongodb-mongodb-2-1-0-tgz https://registry.npmjs.org/mongodb/-/mongodb-2.1.0.tgz
+581 silly lockFile 6b7a726c-mongodb-2-1-0 mongodb@2.1.0
+582 silly lockFile 6b7a726c-mongodb-2-1-0 mongodb@2.1.0
+583 silly lockFile d3746d4c-mongodb-latest mongodb@latest
+584 silly lockFile d3746d4c-mongodb-latest mongodb@latest
+585 info already installed express@4.13.3
+586 silly lockFile b23a2e0a--org-mongoose-mongoose-4-3-1-tgz https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz
+587 silly lockFile b23a2e0a--org-mongoose-mongoose-4-3-1-tgz https://registry.npmjs.org/mongoose/-/mongoose-4.3.1.tgz
+588 silly lockFile 71604e0d-mongoose-4-3-1 mongoose@4.3.1
+589 silly lockFile 71604e0d-mongoose-4-3-1 mongoose@4.3.1
+590 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+591 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+592 error 404 Not Found
+592 error 404
+592 error 404 'nodemailer-smtp-transporter' is not in the npm registry.
+592 error 404 You should bug the author to publish it
+592 error 404 It was specified as a dependency of 'rokostacio'
+592 error 404
+592 error 404 Note that you can also install from a
+592 error 404 tarball, folder, or http url, or git url.
+593 error System Darwin 15.0.0
+594 error command "node" "/usr/local/bin/npm" "install"
+595 error cwd /Users/fsalaman/src/nodejs/rokostacio
+596 error node -v v0.10.34
+597 error npm -v 1.4.28
+598 error code E404
+599 verbose exit [ 1, true ]

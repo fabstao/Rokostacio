@@ -1,0 +1,517 @@
+/* ROKOStacio (C) 2015 */
+p {
+    color: #E7F8F9;
+}
+
+a.fb {
+    color: #E7F8F9;
+}
+
+.fb {
+    color: #E7F8F9;
+}
+
+#fb {
+    align: center;
+    color: #E7F8F9;
+    border-radius: 3px;
+    background: #3b5998;
+    padding: 1px; 
+    width: 266px;
+    height: 17px; 
+}
+
+table.listado {
+    color: black;   
+}
+
+.listado {
+    color: black;   
+}
+
+a:link {
+	color: #DADACA;
+    text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #E1E1E1;
+	}
+a:hover {
+	text-decoration: underline;
+    
+}
+a:active {
+	text-decoration: none;
+}
+
+.titulo {
+    font-family: 'Indie Flower', cursive;
+    color: white;
+}
+
+#container	{
+	position:absolute;
+	margin-top:0px;
+	width: 658px;
+	background-image: url("/images/header.png");
+	background-repeat:	no-repeat;
+	background-position:top;
+	background-color: #010101;
+	}
+
+body { 
+	background-color: #010101;
+	margin: 0px; 
+	margin-left:100px;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #DFEBD1;
+	font-weight: bold;
+	}
+
+textarea {
+    background-color: aliceblue;
+    border: 2px solid black;
+}
+
+#contrato {
+    color: black;
+    font-weight: 200;
+}
+
+.contrato {
+    color: black;
+    font-weight: 200;
+}
+
+.tcontrato {
+    color: black;
+    font-weight: 600;
+}
+
+#intro	{
+	margin-top: 0px;
+	text-align: right;
+	color: #FFFFFF;
+	}
+
+header	{
+	margin-top: 0px;
+    border: 2px solid #552212;
+    padding: 6px;
+	text-align: left;
+	color: #FFFFFF;
+    background-image: url("/images/header-audio.png");
+    width: 958px;
+    background-repeat:	no-repeat;
+	background-position:left;
+    background-color: #020106;
+	}
+
+section {
+    margin: 4px;
+    padding: 4px;
+    background-color: #441916;
+    width: 960px;
+}
+
+#caja1 {
+    position: relative;
+    background-color: #421116;
+    padding: 8px;
+    margin: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border: 2px solid black;
+    opacity: 0.72;
+    width: 460px;
+}
+
+#caja1:hover {
+    opacity: 0.79;
+}    
+
+#elfeis {
+    width: 290px; 
+    color: #DEDEDE; 
+    background-color: #A79997; 
+    opacity: 0.75
+}
+
+nav ul {
+    margin: 0; 
+    padding: 1px;
+    color: #AAA9A9;
+    font-size: 10px;
+    
+}
+nav ul li {
+    display:inline; 
+    margin:5px;
+}
+
+article {
+    border: 2px solid white;
+    background-color: #293132;
+    /* opacity: 0.6; */
+}
+
+article:hover {
+    border: 2px solid #BCBCBC;
+    background-color: #222729;
+    /* opacity: 0.6; */
+}
+
+#pageHeader {
+	height:250px;
+	padding-right: 25px;
+	}
+#pageHeader h1 , #pageHeader h2 , #pageHeader span	{
+	height: 5px;
+	}
+		
+#supportingText, #linkList {
+	padding: 25px;
+	width: 420px;
+	}
+	
+#intro h3 span, #supportingText h3 span	{
+		}
+
+#intro h3	{
+			width: 313px;
+			height: 75px;
+			}
+
+p.p1	{
+		color: #CCCCCC;
+		}
+		
+p.p1, p.p2, p.p3	{
+		margin: 0px;
+		padding: 0px;
+		margin-top: 8px;
+		}
+		
+#explanation h3	{
+			width: 313px;
+			height: 10px;
+			margin: 0px;
+			padding: 25px 0 0 0;
+			}
+	
+#participation h3	{
+			width: 313px;
+			height: 10px;
+			}
+			
+#benefits h3	{
+			width: 313px;
+			height: 10px;
+			}
+			
+#linkList	{
+	position: absolute;
+	top: 300px;
+	left: 450px;
+	width: 100px;
+	height: auto;
+	z-index: 1;
+		}
+		
+#linkList2	{
+		margin-top: 0.px;
+	margin-left: 0px;
+	margin-top: 0px;
+				}
+
+#lselect	{
+		width: 100px;
+		height: auto;
+		color:#CCCCCC;
+			}
+
+#lselect h3 span, #larchives h3 span, #lresources h3 span	{
+		}
+		
+#lselect h3, #larchives h3, #lresources h3	{
+		width: 229px;
+		height: 50px;
+		}
+		
+#lselect h3	{
+			width: 229px;
+			height: 40px;
+			top: 0px;
+			margin: 0px;
+			padding: 0px;
+			}
+		
+#lselect ul, #larchives ul, #lresources ul	{
+	margin-top: 5px;
+		}
+
+#lselect li {
+	border-bottom: 1px dotted #FFFFFF;
+	width: 100px;
+	margin-bottom: 8px;
+}
+
+#lselect .c {
+	text-transform: capitalize;
+}
+
+#lselect a {
+	display: block;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+#lselect a:hover {
+	display: block;
+	font-weight: bold;
+	color: #B99541;
+	background-color:#FFFFFF;
+}
+
+#lselect a.c {
+	color: #FFCC00;
+	display: inline;
+	font-weight: bold;
+}
+
+#lselect a.c:hover {
+	color: #FFCC00;
+	display: inline;
+	font-weight: bold;
+	background-color:#3399FF;
+}
+
+
+#larchives a, #lresources a {
+	font-weight: bold;
+	color:#FFFFFF;
+}
+
+#larchives li, #lresources li {
+	width: 100px;
+	list-style-position: outside;
+}
+
+#lresources li {
+}
+
+#larchives li {
+}
+
+#larchives	{
+		width: 100px;
+		height: 169px;
+					}
+
+#larchives h3	{
+			width: auto;
+			height: 40px;
+			top: 0px;
+			margin: 0px;
+			padding: 0px;
+			}
+			
+#footer		{
+			background-repeat:no-repeat;
+			width: 470px;
+			height: 15px;
+			text-align:center;
+			margin-top:30px;
+			padding: 10px;
+			}
+
+#footer	a	{
+			color: #FF9900;
+				}
+
+/* Diseno movil (C) 2015 Fabian Salamanca D.*/
+
+@media all 
+    and (max-device-width: 900px) and ( min-device-width: 240px )
+{
+body { 
+    background-color: #010101;
+	margin: 0px; 
+	margin-left:7px;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #CFCBD1;
+	font-weight: bold;
+	}
+	
+#intro	{
+	margin-top: 0px;
+	text-align: right;
+	color: #FFFFFF;
+	}
+
+header	{
+	margin-top: 0px;
+    border: 2px solid #552212;
+    padding: 6px;
+	text-align: left;
+	color: #FFFFFF;
+    background-image: url("/images/header-audio.png");
+    width: 358px;
+    background-repeat:	no-repeat;
+	background-position:left;
+    background-color: #020106;
+	}
+
+section {
+    margin: 4px;
+    padding: 4px;
+    background-color: #441916;
+    width: 958px;
+}
+
+#caja1 {
+    position: relative;
+    background-color: #421116;
+    padding: 8px;
+    margin: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border: 2px solid black;
+    opacity: 0.72;
+    width: 290px;
+}
+
+#caja1:hover {
+    opacity: 0.79;
+}    
+
+#elfeis {
+    width: 120px; 
+    color: #DEDEDE; 
+    background-color: #A79997; 
+    opacity: 0.65
+}
+
+        
+nav ul {
+    margin: 0; 
+    padding: 1px;
+    color: #AAA9A9;
+    font-size: 10px;
+    
+}
+nav ul li {
+    display:inline; 
+    margin:5px;
+}
+
+article {
+    border: 2px solid white;
+    background-color: #293132;
+    /* opacity: 0.6; */
+}
+
+article:hover {
+    border: 2px solid #BCBCBC;
+    background-color: #222729;
+    /* opacity: 0.6; */
+}
+}
+
+@media all 
+    and ( max-width: 900px ) and ( min-width: 240px )
+    {
+      body { 
+	background-color: #010101;
+	margin: 0px; 
+	margin-left:8px;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #CFCBD1;
+	font-weight: bold;
+	}
+	
+#intro	{
+	margin-top: 0px;
+	text-align: right;
+	color: #FFFFFF;
+	}
+
+header	{
+	margin-top: 0px;
+    border: 2px solid #552212;
+    padding: 6px;
+	text-align: left;
+	color: #FFFFFF;
+    background-image: url("/images/header-audio.png");
+    width: 358px;
+    background-repeat:	no-repeat;
+	background-position:left;
+    background-color: #020106;
+	}
+
+section {
+    margin: 4px;
+    padding: 4px;
+    background-color: #441916;
+    width: 358px;
+}
+
+#caja1 {
+    position: relative;
+    background-color: #421116;
+    padding: 8px;
+    margin: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border: 2px solid black;
+    opacity: 0.72;
+    width: 290px;
+}
+
+#caja1:hover {
+    opacity: 0.79;
+}    
+
+#elfeis {
+    width: 120px; 
+    color: #DEDEDE; 
+    background-color: #A79997; 
+    opacity: 0.65
+}
+
+
+nav ul {
+    margin: 0; 
+    padding: 1px;
+    color: #AAA9A9;
+    font-size: 10px;
+    
+}
+nav ul li {
+    display:inline; 
+    margin:5px;
+}
+
+article {
+    border: 2px solid white;
+    background-color: #293132;
+    /* opacity: 0.6; */
+}
+
+article:hover {
+    border: 2px solid #BCBCBC;
+    background-color: #222729;
+    /* opacity: 0.6; */
+}
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROKOStacio</title>
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<script src="javascripts/jquery-1.11.3.min.js"></script>
+<script src="javascripts/md5.js"></script>
+<script src="javascripts/vertigo.js"></script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
+</head>
+<body>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+    }%>
+    
+<header>
+    <div id="caja1" align="right">
+    <br><h1>ROKOStacio</h1>
+    <h2>Transmisi&oacute;n de música independiente por internet</h2><br><br>
+    </div>
+</header>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+}%>
+
+<nav>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/cargar">Cargar rolas</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') { %>
+    <li><a href="/logout">Logout (Salir)</a></li>
+    <% } %>
+    <% if(typeof usuario === 'undefined') { %>
+    <li><a href="https://www.rokostacio.rocks/login">Login</a></li>
+    <li><a href="https://www.rokostacio.rocks/registro">Registrarse</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') {
+        if(visitante === "fabs@valtis.mx") { %>
+            <li><a href="/buscar">Listar rolas</a></li>
+        <% } 
+           } %>
+    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
+</ul>
+</nav>
+<section>
+
+<% if(typeof usuario !== 'undefined') { %>
+    <h4>Bienvenido <%= visitante %></h4>
+<% } %>
+<h2>Login</h2>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rokostacio-horizontal -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9211034721796534"
+     data-ad-slot="4966251387"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<font color="#AA2211"><h3 class="error"><%= mensaje %></h3></font>
+<p>
+    <form action='/login' method="post" onsubmit="return validar()">
+        Correo-e <input type="email" name="email" autocomplete="on" required><br>
+        Contraseña <input type="password" name="password" maxlength="20" required><br>
+        <h4>Pregunta de seguridad:</h4>
+        <img id="cimagen" name="cimagen" src=""><br><input type=text id="cvalor" placeholder="Seguridad" required><br>
+        <input type="hidden" id="cgalleta"><input type="hidden" id="dbindex">
+        <br>
+        <input type="submit" value="Mandar">
+    </form>
+</p>
+</section>
+</body>
+<script> 
+    generar(); 
+</script>
+</html>

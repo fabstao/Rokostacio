@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<title>ROKOStacio</title>
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
+</head>
+<body>
+
+<% 
+    //Extraer datos de la sesión
+    console.log("Inicia cargar ejs");
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+    } %>
+<header>
+    <div id="caja1" align="right">
+    <br><h1>ROKOStacio</h1>
+    <h2>Transmisi&oacute;n de música independiente por internet</h2><br><br>
+    </div>
+</header>
+<nav>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/cargar">Cargar rolas</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') { %>
+    <li><a href="/logout">Logout (Salir)</a></li>
+    <% } %>
+    <% if(typeof usuario === 'undefined') { %>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/registro">Registrarse</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') {
+        if(visitante === "fabs@valtis.mx") { %>
+            <li><a href="/buscar">Listar rolas</a></li>
+        <% } 
+           } %>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/registro/perfil">Perfil</a></li>
+    <% } %>
+</ul>
+</nav>
+<section>
+
+<% if(typeof usuario !== 'undefined') { %>
+    <h4>Bienvenido <%= visitante %></h4>
+<% } %>
+<h2>Cargar canción, rola, pieza o podcast</h2>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rokostacio-horizontal -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9211034721796534"
+     data-ad-slot="4966251387"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+   <% if(typeof usuario !== 'undefined') { %> 
+    <form action='/subir.php7' method="post" enctype="multipart/form-data">
+        Nombre de la banda <input type="text" name="banda2" disabled value="<%= banda %>"><br><br>
+        Nombre de la pieza <input type="text" name="rola" maxlength="45" required><br><br>
+        Género 
+        <select name="genero">
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+            <option value="indie">Indie</option>
+            <option value="soul">Soul</option>
+            <option value="podcast">Otros</option>
+        </select>
+        <br><br>
+        Nombre del álbum (LP, EP, etc) <input type="text" name="album" maxlength="45" required><br><br>
+        Liga para comprar en iTunes <input type="text" name="itunes" maxlength="75"><br><br>
+        Liga para comprar en Google Play <input type="text" name="google" maxlength="75"><br><br>
+        <input type="file" name="archivo" id="archivo" accept="audio/x-mpeg" required><br><br>
+        <input type="hidden" name="banda" value="<%= banda %>">
+        <input type="submit" value="Mandar">
+    </form>
+    <% } %>
+</p>
+</section>
+</body>
+</html>

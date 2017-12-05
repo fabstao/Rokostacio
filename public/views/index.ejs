@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROKOStacio</title>
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '176542362693823',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+    }%>
+    
+<header>
+    <div id="caja1" align="left">
+    <br><br><font color="white" class="titulo" size=20>ROKOStacio</font>
+    <h2>Transmisi&oacute;n de música independiente por internet</h2><br>
+    </div>
+</header>
+
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+}%>
+
+<nav>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/cargar">Cargar rolas</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') { %>
+    <li><a href="/logout">Logout (Salir)</a></li>
+    <% } %>
+    <% if(typeof usuario === 'undefined') { %>
+    <li><a href="https://www.rokostacio.rocks/login">Login</a></li>
+    <li><a href="https://www.rokostacio.rocks/registro">Registrarse</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') {
+        if(visitante === "fabs@valtis.mx") { %>
+            <li><a href="/buscar">Listar rolas</a></li>
+        <% } 
+           } %>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/registro/perfil">Perfil</a></li>
+    <% } %>
+    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
+</ul>
+</nav>
+<section>
+
+<% if(typeof usuario !== 'undefined') { %>
+    <h4>Bienvenido <%= visitante %></h4>
+<% } %>
+    <div align="right">
+    <div
+        align="right"
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true"
+        id="elfeis"  >
+    </div>
+    </div>
+<% if(typeof usuario === 'undefined') { %>
+    <p class="fb" id="fb" align="center"><font color="#E1E1E1"><a class="fb" href="https://www.rokostacio.rocks/auth/facebook">
+        ¡Con&eacute;ctate usando tu cuenta de Facebook! </a>
+    </p>
+<% } %>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rokostacio-horizontal -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9211034721796534"
+     data-ad-slot="4966251387"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br>
+<!-- Activar video promocional
+<div align="center">
+ <iframe width="620" height="315"
+src="https://www.youtube.com/embed/WG2DIvTi7sM">
+</iframe> 
+</div>
+-->
+<h2>CANALES</h2>
+<article>
+    <a href="/canales/rock">
+        <h3>Rock</h3>
+        <p>Bandas que suenan a rock, en todas sus variantes</p>
+    </a>
+</article>
+
+<article>
+    <a href="/canales/metal">
+        <h3>Metal</h3>
+        <p>Todas las opciones de metal van aqu&iacute;</p>
+    </a>
+</article>
+
+<article>
+    <a href="/canales/indie">
+        <h3>Indie</h3>
+        <p>Música indie, experimental y similares, por ac&aacute;</p>
+    </a>
+</article>
+
+<article>
+    <a href="/canales/soul">
+        <h3>Soul</h3>
+        <p>Rythm and blues, soul, m&uacute;sica que ilumina el cuarto</p>
+    </a>
+</article>
+    
+<article>
+    <a href="/canales/podcasts">
+        <h3>Podcasts</h3>
+        <p>Escucha acerca de temas interesantes, alternativos, aqu&iacute;</p>
+    </a>
+</article>
+<img src="/images/header.png" height="50" width="50">
+<audio controls autoplay id="rradio">
+    <source src="/rradio" type="audio/mpeg">
+</audio>
+<script type="text/javascript">
+    document.getElementById('rradio').addEventListener("ended",function() {
+        location.reload();
+    });
+</script>
+</section>
+
+<footer>
+<p>&copy; NUO Tecnolog&iacute;a S. de R.L. de C.V.</p>
+</footer>
+
+</body>
+</html>

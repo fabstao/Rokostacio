@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+<head>
+<% 
+    //Extraer datos de la sesión
+    var matrx;
+    var visitante;
+    var banda;
+    var userid;
+    if(typeof usuario !== 'undefined') { 
+        matrx = JSON.stringify(usuario);
+        visitante = usuario.email;
+        banda = usuario.banda;
+        userid = usuario.id;
+        if(typeof userid == "undefined" ) userid = visitante;
+    }%>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROKOStacio</title>
+<meta charset="utf-8">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<script src="/javascripts/jquery-1.11.3.min.js">
+</script>
+
+<script>
+function gustar() {
+    $.get("/rradio/megusta?id=<%= rola %>&userid=<%= userid %>", function(dato,resp) {
+        //alert("¡Gracias!");
+        $("#bgusta").disabled=true;
+        $("#tgusta").html(dato);   
+    });
+}    
+</script>   
+    
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '176542362693823',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+    
+<header>
+    <div id="caja1" align="left">
+    <br><br><font color="white" class="titulo" size=20>ROKOStacio</font>
+    <h2>Transmisi&oacute;n de música independiente por internet</h2><br>
+    </div>
+</header>
+
+<nav>
+<ul>
+    <li><a href="/">Inicio</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/cargar">Cargar rolas</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') { %>
+    <li><a href="/logout">Logout (Salir)</a></li>
+    <% } %>
+    <% if(typeof usuario === 'undefined') { %>
+    <li><a href="https://www.rokostacio.rocks/login">Login</a></li>
+    <li><a href="https://www.rokostacio.rocks/registro">Registrarse</a></li>
+    <% } %>
+    <% if(typeof usuario !== 'undefined') {
+        if(visitante === "fabs@valtis.mx") { %>
+            <li><a href="/buscar">Listar rolas</a></li>
+        <% } 
+           } %>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/registro/perfil">Perfil</a></li>
+    <% } %>
+    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
+</ul>
+</nav>
+<section>
+
+<% if(typeof usuario !== 'undefined') { %>
+    <h4>Bienvenido <%= visitante %></h4>
+<% } %>
+    
+<% if(typeof usuario === 'undefined') { %>
+    <p class="fb" id="fb"><font color="#E1E1E1"><a id="fb" class="fb" href="/auth/facebook">¡Con&eacute;ctate usando tu cuenta de Facebook! 
+     </a></font>
+    </p>
+<% } %>
+<table>
+<tr>
+<td><img src="/images/header.png" height="40" width="40"></td><td><h2><%= title %></h2></td>
+</tr>
+</table>
+<article>
+<table>
+<tr>
+<td>
+    <%= larola %> &nbsp;&nbsp;&nbsp;<i>Album: </i><%= album %> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <% if(itunes) { %>
+    Comprar en <a href="<%= itunes %>">iTunes</a> ... 
+    <% } %>
+    <% if(google) { %>
+    Comprar en <a href="<%= google %>">Google</a><br>
+    <% } %><br>
+<audio controls autoplay id="rradio">
+    <source src="/uploads/<%= rola %>" type="audio/mpeg">
+    </audio>
+</td><td>
+    <input 
+                   id="bgusta" 
+                   type="image" 
+                   src="/images/heart.png" 
+                   onclick="gustar()" 
+                   width="28" 
+                   height="26" 
+                   <% if(typeof usuario === 'undefined') { %>
+                    disabled
+                    <% } %>
+                >
+</td><td>
+    <div id="tgusta"><%= mgusta %></div>
+</td>
+    <td>&nbsp;&nbsp;&nbsp;<img src=/images/play.png width="24" height="22"></td><td><div><%= tocadas %></div></td>
+    <td>&nbsp;&nbsp;<a href="#" onclick="location.reload()"><img src="/images/ffwd.png" width="24" height="22"></a></i></td>
+<td>
+    <div
+        align="right"
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true" 
+        style="width: 290px; color: #DEDEDE; background-color: #A79997; opacity: 0.65">
+    </div><br>
+</td></tr>    
+</table>
+<table>
+<tr><td>
+<img src="/uploads/<%= foto %>" height="300" width="460">
+</td><td>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rokostacio-canal -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9211034721796534"
+     data-ad-slot="7431059783"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+</table>
+</article>
+
+
+<script type="text/javascript">
+    document.getElementById('rradio').addEventListener("ended",function() {
+        location.reload();
+    });
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rokostacio-horizontal -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9211034721796534"
+     data-ad-slot="4966251387"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</section>
+
+<footer>
+<p>&copy; NUO Tecnolog&iacute;a S. de R.L. de C.V.</p>
+</footer>
+
+</body>
+</html>
