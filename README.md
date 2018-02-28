@@ -1,5 +1,6 @@
 # Rokostacio
-ROKOStacio is an online music streaming app using Node.js and MongoDB with GridFS
+
+ROKOStacio is an online music streaming app using Node.js, Express and MongoDB with GridFS
 
 In order to get it up and running, remember to install all the required modules:
 
