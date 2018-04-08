@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es_MX">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
 <title>ROKOStacio</title>
 <meta charset="utf-8">
 
@@ -10,16 +10,13 @@
 </script>
 <![endif]-->
 
-<script src="/javascripts/jquery-1.11.3.min.js"></script>
-<script src="/javascripts/md5.js"></script>
-<script src="/javascripts/vertigo.js"></script> 
-
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
 </head>
 <body>
 
 <% 
     //Extraer datos de la sesión
+    console.log("Inicia cargar ejs");
     var matrx;
     var visitante;
     var banda;
@@ -27,26 +24,13 @@
         matrx = JSON.stringify(usuario);
         visitante = usuario.email;
         banda = usuario.banda;
-    }%>
-    
+    } %>
 <header>
     <div id="caja1" align="right">
     <br><h1>ROKOStacio</h1>
     <h2>Transmisi&oacute;n de música independiente por internet</h2><br><br>
     </div>
 </header>
-
-<% 
-    //Extraer datos de la sesión
-    var matrx;
-    var visitante;
-    var banda;
-    if(typeof usuario !== 'undefined') { 
-        matrx = JSON.stringify(usuario);
-        visitante = usuario.email;
-        banda = usuario.banda;
-}%>
-
 <nav>
 <ul>
     <li><a href="/">Inicio</a></li>
@@ -65,7 +49,9 @@
             <li><a href="/buscar">Listar rolas</a></li>
         <% } 
            } %>
-    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
+    <% if(typeof banda !== 'undefined') { %>
+    <li><a href="/registro/perfil">Perfil</a></li>
+    <% } %>
 </ul>
 </nav>
 <section>
@@ -73,7 +59,7 @@
 <% if(typeof usuario !== 'undefined') { %>
     <h4>Bienvenido <%= visitante %></h4>
 <% } %>
-<h2>Recuperar contraseña</h2>
+<h2>Cargar canción, rola, pieza o podcast</h2>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Rokostacio-horizontal -->
 <ins class="adsbygoogle"
@@ -83,20 +69,29 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<font color="#AA2211"><h3 class="error"><%= mensaje %></h3></font>
 <p>
-    <form action='/login/loolvide' method="post" onsubmit="return validar()">
-        Correo-e <input type="email" name="email" autocomplete="on" required><br>
-        <h4>Pregunta de seguridad:</h4>
-        <img id="cimagen" name="cimagen" src=""><br><input type=text id="cvalor" placeholder="Seguridad" required><br>
-        <input type="hidden" id="cgalleta"><input type="hidden" id="dbindex">
-        <br>
+   <% if(typeof usuario !== 'undefined') { %> 
+    <form action='/subir.php7' method="post" enctype="multipart/form-data">
+        Nombre de la banda <input type="text" name="banda2" disabled value="<%= banda %>"><br><br>
+        Nombre de la pieza <input type="text" name="rola" maxlength="45" required><br><br>
+        Género 
+        <select name="genero">
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+            <option value="indie">Indie</option>
+            <option value="soul">Soul</option>
+            <option value="podcast">Otros</option>
+        </select>
+        <br><br>
+        Nombre del álbum (LP, EP, etc) <input type="text" name="album" maxlength="45" required><br><br>
+        Liga para comprar en iTunes <input type="text" name="itunes" maxlength="75"><br><br>
+        Liga para comprar en Google Play <input type="text" name="google" maxlength="75"><br><br>
+        <input type="file" name="archivo" id="archivo" accept="audio/x-mpeg" required><br><br>
+        <input type="hidden" name="banda" value="<%= banda %>">
         <input type="submit" value="Mandar">
     </form>
+    <% } %>
 </p>
 </section>
 </body>
-<script> 
-    generar(); 
-</script>
 </html>

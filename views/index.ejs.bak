@@ -99,7 +99,7 @@
     </div>
     </div>
 <% if(typeof usuario === 'undefined') { %>
-    <p class="fb" id="fb" align="center"><font color="#E1E1E1"><a class="fb" href="/auth/facebook">
+    <p class="fb" id="fb" align="center"><font color="#E1E1E1"><a class="fb" href="https://www.rokostacio.rocks/auth/facebook">
         ¡Con&eacute;ctate usando tu cuenta de Facebook! </a>
     </p>
 <% } %>

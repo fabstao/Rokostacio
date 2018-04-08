@@ -82,10 +82,6 @@ function gustar() {
             <li><a href="/buscar">Listar rolas</a></li>
         <% } 
            } %>
-    <% if(typeof banda !== 'undefined') { %>
-    <li><a href="/registro/perfil">Perfil</a></li>
-    <% } %>
-    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
 </ul>
 </nav>
 <section>
@@ -96,25 +92,19 @@ function gustar() {
     
 <% if(typeof usuario === 'undefined') { %>
     <p class="fb" id="fb"><font color="#E1E1E1"><a id="fb" class="fb" href="/auth/facebook">¡Con&eacute;ctate usando tu cuenta de Facebook! 
-     </a></font>
+    <img src="/images/fb.png" width="20" height="20"> </a></font>
     </p>
 <% } %>
 <table>
 <tr>
-<td><img src="/images/header.png" height="40" width="40"></td><td><h2><%= title %></h2></td>
+<td><img src="/images/header.png" height="40" width="40"></td><td><h2>ROCK</h2></td>
 </tr>
 </table>
 <article>
 <table>
 <tr>
 <td>
-    <%= larola %> &nbsp;&nbsp;&nbsp;<i>Album: </i><%= album %> &nbsp;&nbsp;&nbsp;&nbsp; 
-    <% if(itunes) { %>
-    Comprar en <a href="<%= itunes %>">iTunes</a> ... 
-    <% } %>
-    <% if(google) { %>
-    Comprar en <a href="<%= google %>">Google</a><br>
-    <% } %><br>
+<%= larola %><br>
 <audio controls autoplay id="rradio">
     <source src="/uploads/<%= rola %>" type="audio/mpeg">
     </audio>
@@ -134,7 +124,6 @@ function gustar() {
     <div id="tgusta"><%= mgusta %></div>
 </td>
     <td>&nbsp;&nbsp;&nbsp;<img src=/images/play.png width="24" height="22"></td><td><div><%= tocadas %></div></td>
-    <td>&nbsp;&nbsp;<a href="#" onclick="location.reload()"><img src="/images/ffwd.png" width="24" height="22"></a></i></td>
 <td>
     <div
         align="right"
@@ -148,7 +137,7 @@ function gustar() {
 </table>
 <table>
 <tr><td>
-<img src="/uploads/<%= foto %>" height="300" width="460">
+<img src="/uploads/<%= foto %>" height="280" width="336">
 </td><td>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Rokostacio-canal -->

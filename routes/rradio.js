@@ -137,7 +137,7 @@ router.get('/rradio/aprobar', function(req, res, next) {
                 }
                 console.log(result.result);
                 res.send("OK");
-            });
+            }); 
     }
 });
 

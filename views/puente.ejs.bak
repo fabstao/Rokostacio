@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es_MX">
 <head>
+<meta http-equiv="refresh" content="2; url=/registro/perfil" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ROKOStacio</title>
 <meta charset="utf-8">
@@ -10,9 +11,9 @@
 </script>
 <![endif]-->
 
-<script src="/javascripts/jquery-1.11.3.min.js"></script>
-<script src="/javascripts/md5.js"></script>
-<script src="/javascripts/vertigo.js"></script> 
+<script src="javascripts/jquery-1.11.3.min.js"></script>
+<script src="javascripts/md5.js"></script>
+<script src="javascripts/vertigo.js"></script>
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
 </head>
@@ -57,8 +58,8 @@
     <li><a href="/logout">Logout (Salir)</a></li>
     <% } %>
     <% if(typeof usuario === 'undefined') { %>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/registro">Registrarse</a></li>
+    <li><a href="https://www.rokostacio.rocks/login">Login</a></li>
+    <li><a href="https://www.rokostacio.rocks/registro">Registrarse</a></li>
     <% } %>
     <% if(typeof usuario !== 'undefined') {
         if(visitante === "fabs@valtis.mx") { %>
@@ -73,7 +74,7 @@
 <% if(typeof usuario !== 'undefined') { %>
     <h4>Bienvenido <%= visitante %></h4>
 <% } %>
-<h2>Recuperar contraseña</h2>
+<h2>Actualización exitosa, por favor espere...</h2>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Rokostacio-horizontal -->
 <ins class="adsbygoogle"
@@ -83,16 +84,8 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<font color="#AA2211"><h3 class="error"><%= mensaje %></h3></font>
 <p>
-    <form action='/login/loolvide' method="post" onsubmit="return validar()">
-        Correo-e <input type="email" name="email" autocomplete="on" required><br>
-        <h4>Pregunta de seguridad:</h4>
-        <img id="cimagen" name="cimagen" src=""><br><input type=text id="cvalor" placeholder="Seguridad" required><br>
-        <input type="hidden" id="cgalleta"><input type="hidden" id="dbindex">
-        <br>
-        <input type="submit" value="Mandar">
-    </form>
+...
 </p>
 </section>
 </body>

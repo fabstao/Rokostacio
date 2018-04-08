@@ -11,8 +11,15 @@
 <![endif]-->
 
 <script src="/javascripts/jquery-1.11.3.min.js"></script>
-<script src="/javascripts/md5.js"></script>
-<script src="/javascripts/vertigo.js"></script> 
+<script>
+function aprobar(rolaid) {
+    $.get("/rradio/aprobar?borrar="+rolaid, function(dato,resp) {
+        alert("Aprobada: " + dato + " Respuesta: " + resp);
+        $("#"+rolaid).disabled=true;   
+        location.reload();
+    });
+}
+</script>
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rk.css" />
 </head>
@@ -65,7 +72,6 @@
             <li><a href="/buscar">Listar rolas</a></li>
         <% } 
            } %>
-    <li><a href="http://nuo.com.mx/?page_id=6" target="_blank">Acuerdo de Privacidad</a></li>
 </ul>
 </nav>
 <section>
@@ -73,30 +79,39 @@
 <% if(typeof usuario !== 'undefined') { %>
     <h4>Bienvenido <%= visitante %></h4>
 <% } %>
-<h2>Recuperar contraseña</h2>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Rokostacio-horizontal -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-9211034721796534"
-     data-ad-slot="4966251387"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<font color="#AA2211"><h3 class="error"><%= mensaje %></h3></font>
-<p>
-    <form action='/login/loolvide' method="post" onsubmit="return validar()">
-        Correo-e <input type="email" name="email" autocomplete="on" required><br>
-        <h4>Pregunta de seguridad:</h4>
-        <img id="cimagen" name="cimagen" src=""><br><input type=text id="cvalor" placeholder="Seguridad" required><br>
-        <input type="hidden" id="cgalleta"><input type="hidden" id="dbindex">
-        <br>
+<h2>Bandas y rolas</h2>
+    <p>
+    <form action='/buscar/banda' method="get">
+        <input type="text" name="nombre"><br>
         <input type="submit" value="Mandar">
     </form>
-</p>
-</section>
+    </p>
+    <table class="listado">
+    <% 
+    function isOdd(n) {
+        return Math.abs(n % 2) == 1;
+    }
+    var i = 0;
+    var color = "#778889";
+    var val; 
+    matriz.forEach(function(listado) { 
+        i++;
+        console.log(i);
+        val = isOdd(i);
+        if(isOdd(i) == false) { color = "#BBCCDD"; }   
+        if(isOdd(i) == true) { color = "#8999AA"; }
+    %>
+        <tr><td bgcolor="<%= color %>">Banda: <b><%= listado.metadata.banda %></b></td>
+            <td bgcolor="<%= color %>">Rola: 
+                <audio controls><source src="/uploads/<%= listado._id %>" type="audio/mpeg">
+            </audio><%= listado.metadata.rola %></td><td bgcolor="<%= color %>">Aprobar 
+            <% if(visitante) { %>
+            <input type="image" 
+                   src="/images/aprobar.png" id="<%= listado._id %>"
+                   width="20" height="20" onclick="aprobar('<%= listado._id %>');">
+            <% } %></td></tr>
+    <% }); %>
+    </table>
+    </section>
 </body>
-<script> 
-    generar(); 
-</script>
 </html>

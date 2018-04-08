@@ -65,8 +65,8 @@
     <li><a href="/logout">Logout (Salir)</a></li>
     <% } %>
     <% if(typeof usuario === 'undefined') { %>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/registro">Registrarse</a></li>
+    <li><a href="https://www.rokostacio.rocks/login">Login</a></li>
+    <li><a href="https://www.rokostacio.rocks/registro">Registrarse</a></li>
     <% } %>
     <% if(typeof usuario !== 'undefined') {
         if(visitante === "fabs@valtis.mx") { %>
