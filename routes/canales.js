@@ -32,7 +32,7 @@ router.get('/canales/rock', function(req, res, next) {
     var google;
     console.log("Sesión: " + req.user);
     var larola;
-    var db=req.app.locals.db;
+    //var db=req.app.locals.db;
     var datos=db.collection("fs.files");
     datos.find( { "metadata.genero" : "rock", "metadata.aprobada" : "si" } ).count(function(err,count){
         console.log(err);
@@ -85,13 +85,13 @@ router.get('/canales/indie', function(req, res, next) {
     var google;
     console.log("Sesión: " + req.user);
     var larola;
-    var db=req.app.locals.db;
+    //var db=req.app.locals.db;
     var datos=db.collection("fs.files");
     datos.find( { "metadata.genero" : "indie", "metadata.aprobada" : "si"  } ).count(function(err,count){
-        console.log(err);
+        console.log("Error = "+err);
         var irid = Math.random();
         irid = Math.ceil(irid * count)-1;
-        console.log(irid);
+        console.log("IRID = "+irid);
         var options = {
             limit: 1,
             skip: irid
@@ -122,7 +122,7 @@ router.get('/canales/indie', function(req, res, next) {
     
 });
 
-/* ROCK */ 
+/* METAL */ 
 router.get('/canales/metal', function(req, res, next) {
     var rolaid;
     var fotoid;
@@ -133,13 +133,13 @@ router.get('/canales/metal', function(req, res, next) {
     var itunes;
     var album;
     var google;
-    var db=req.app.locals.db;
+    //var db=req.app.locals.db;
     var datos=db.collection("fs.files");
     datos.find( { "metadata.genero" : "metal", "metadata.aprobada" : "si" } ).count(function(err,count){
-        console.log(err);
+        console.log("Error = "+err);
         var irid = Math.random();
         irid = Math.ceil(irid * count)-1;
-        console.log(irid);
+        console.log("IRID = "+irid);
         var options = {
             limit: 1,
             skip: irid
@@ -180,13 +180,13 @@ router.get('/canales/podcasts', function(req, res, next) {
     var itunes;
     var album;
     var google;
-    var db=req.app.locals.db;
+    //var db=req.app.locals.db;
     var datos=db.collection("fs.files");
     datos.find( { "metadata.genero" : "podcast", "metadata.aprobada" : "si" } ).count(function(err,count){
-        console.log(err);
+        console.log("Error = "+err);
         var irid = Math.random();
         irid = Math.ceil(irid * count)-1;
-        console.log(irid);
+        console.log("IRID = "+irid);
         var options = {
             limit: 1,
             skip: irid
@@ -216,6 +216,7 @@ router.get('/canales/podcasts', function(req, res, next) {
     });
 });
 
+/* SOUL */
 router.get('/canales/soul', function(req, res, next) {
     var rolaid;
     var fotoid;
@@ -228,13 +229,13 @@ router.get('/canales/soul', function(req, res, next) {
     var google;
     console.log("Sesión: " + req.user);
     var larola;
-    var db=req.app.locals.db;
+    //var db=req.app.locals.db;
     var datos=db.collection("fs.files");
     datos.find( { "metadata.genero" : "soul", "metadata.aprobada" : "si" } ).count(function(err,count){
-        console.log(err);
+        console.log("Error = "+err);
         var irid = Math.random();
         irid = Math.ceil(irid * count)-1;
-        console.log(irid);
+        console.log("IRID = "+irid);
         var options = {
             limit: 1,
             skip: irid

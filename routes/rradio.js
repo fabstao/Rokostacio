@@ -23,7 +23,7 @@ router.use(multer( { dest: './uploads/' } ).single('archivo') );
 router.get('/rradio',  function(req, res, next) {
     var rrola;
     var lista;
-    var db = req.app.locals.db;
+    //var db = req.app.locals.db;
     
     var datos=db.collection('fs.files');
     //var rola=datos.find({},{ limit: 1, skip: '_rand()'  }).toArray();
