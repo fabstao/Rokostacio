@@ -3,21 +3,16 @@ var router = express.Router();
 
 var mongo = require('mongodb');
 var malla = require("gridfs-stream");
-var dbconfs = require('../conf.js');
 var writestream;
 var grfs;
 
-
 // Inicializa toda la base de datos con GRFS
-console.log("DBServer: " + dbconfs.dbserver);
-console.log("DBName: " + dbconfs.dbname);
-var db = new mongo.Db(dbconfs.dbname, new mongo.Server(dbconfs.dbserver, dbconfs.dbport));
+var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
 db.open(function (err) {
   if (err) console.log(err);
   grfs = malla(db, mongo);
   console.log("Conectado a DB rradio");
 });
-
 
 /* ROCK */
 router.get('/canales/rock', function(req, res, next) {
@@ -122,7 +117,7 @@ router.get('/canales/indie', function(req, res, next) {
     
 });
 
-/* ROCK */ 
+/* ROCK */
 router.get('/canales/metal', function(req, res, next) {
     var rolaid;
     var fotoid;

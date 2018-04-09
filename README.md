@@ -10,7 +10,7 @@ Required NPM Modules:
 
 {
   "name": "rokostacio",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -22,8 +22,7 @@ Required NPM Modules:
     "express": "latest",
     "serve-favicon": "latest",
     "ejs": "latest",
-    "gridfs-stream": "latest",
-    "mongodb": "latest",
+    "mongodb": "2.2.5",
     "passport": "latest",
     "passport-local": "latest",
     "passport-facebook": "latest",

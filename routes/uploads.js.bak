@@ -10,14 +10,12 @@ var grfs;
 
 // Inicializa toda la base de datos con GRFS
 
-/*
-var db = new mongo.Db('rokostacio', new mongo.Server(dbserver, 27017));
+var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
 db.open(function (err) {
   if (err) console.log(err);
   grfs = malla(db, mongo);
   console.log("Conectado a DB");
 });
-*/ 
 
 //var subidas = multer( { dest: './uploads/' } );
 router.use(multer( { dest: './uploads/' } ).single('archivo') );
@@ -25,7 +23,6 @@ router.use(multer( { dest: './uploads/' } ).single('archivo') );
 router.get('/uploads/:fileId',  function(req, res, next) {
     var elid=new ObjectID(req.params.fileId);
     console.log(req.params.fileId);
-    var db = req.app.locals.db;
     var datos=db.collection("fs.files");
     datos.update({ "_id": elid, "metadata.rola" : /.*/  }, { $inc: { "metadata.tocadas" : 1 }}, function(err,result){
         console.log(err);

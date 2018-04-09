@@ -26,6 +26,7 @@ var malla = require("gridfs-stream");
 var passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy
    , FacebookStrategy = require('passport-facebook').Strategy;
+var dbconfs = require('./conf.js');
 var writestream;
 var grfs;
 
@@ -37,7 +38,7 @@ var app = express();
 
 // Inicializa toda la base de datos con GRFS
 
-var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
+var db = new mongo.Db(dbconfs.dbname, new mongo.Server(dbconfs.dbserver, dbconfs.dbport));
 db.open(function (err) {
   if (err) console.log(err);
   grfs = malla(db, mongo);

@@ -1,6 +1,6 @@
 {
   "name": "rokostacio",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -12,19 +12,18 @@
     "express": "latest",
     "serve-favicon": "latest",
     "ejs": "latest",
-    "gridfs-stream": "latest",
-    "mongodb": "latest",
+    "mongodb": "2.2.5",
     "passport": "latest",
     "passport-local": "latest",
     "passport-facebook": "latest",
     "multer": "latest",
     "gridfs-stream": "latest",
-    "nodemon" : "latest",
-    "express-session" : "latest",
-    "connect-flash" : "latest" ,
-    "nodemailer" : "latest" ,
-    "nodemailer-smtp-transport" : "latest" ,
-    "forever" : "latest",
-    "morgan" : "latest"
+    "nodemon": "latest",
+    "express-session": "latest",
+    "connect-flash": "latest",
+    "nodemailer": "latest",
+    "nodemailer-smtp-transport": "latest",
+    "forever": "latest",
+    "morgan": "latest"
   }
 }

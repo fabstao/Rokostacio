@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
-var dbconfs = require('../conf.js');
+
 var mongo = require('mongodb');
 var malla = require("gridfs-stream");
 var ObjectID = require('mongodb').ObjectID;
@@ -9,12 +9,15 @@ var writestream;
 var grfs;
 
 // Inicializa toda la base de datos con GRFS
-var db = new mongo.Db(dbconfs.dbname, new mongo.Server(dbconfs.dbserver, dbconfs.dbport));
+var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
 db.open(function (err) {
   if (err) console.log(err);
   grfs = malla(db, mongo);
   console.log("Conectado a DB rradio");
 });
+
+//var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
+//var subidas = multer( { dest: './uploads/' } );
 
 // db.fs.files.find().limit( 1 ).skip( _rand() * db.fs.files.count() ) query random
 

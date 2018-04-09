@@ -9,7 +9,7 @@ var grfs;
 
 // Inicializa toda la base de datos con GRFS
 
-//var db = new mongo.Db('rokostacio', new mongo.Server(dbserver, 27017));
+//var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
 
 //var subidas = multer( { dest: './uploads/' } );
 //router.use(multer( { dest: './uploads/' } ).single('archivo') );

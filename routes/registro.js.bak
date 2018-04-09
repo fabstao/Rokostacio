@@ -19,14 +19,12 @@ var nodemailer = require('nodemailer');
 var smtpTx = require('nodemailer-smtp-transport');
 var grfs;
 
-/*
-var db = new mongo.Db('rokostacio', new mongo.Server(dbserver, 27017));
+var db = new mongo.Db('rokostacio', new mongo.Server("127.0.0.1", 27017));
 db.open(function (err) {
     if (err) console.log(err);
     grfs = malla(db, mongo);
     console.log("Conectado a DB");
-    }); 
-*/
+    });
 
 /* GET users listing. */
 router.get('/registro', function(req, res, next) {
@@ -36,7 +34,6 @@ router.get('/registro', function(req, res, next) {
 subida=multer( { dest: './uploads/' } );
 router.post('/registro', subida.single('archivo'), function(req, res, next) {
     //db = req.app.locals.db;
-    var db = req.app.locals.db;
     var datos = db.collection('usuarios');
     var bandera = true;
     
@@ -105,7 +102,6 @@ router.post('/registro', subida.single('archivo'), function(req, res, next) {
 
 router.post('/registro/perfil', subida.single('archivo'), function(req, res, next) {
     //db = req.app.locals.db;
-    var db = req.app.locals.db;
     var datos = db.collection('usuarios');
     var bandera = true;
     var perfil = req.user;
@@ -202,7 +198,6 @@ router.post('/registro/perfil', subida.single('archivo'), function(req, res, nex
 });
 
 router.get('/registro/perfil', function(req, res, next) {
-    var db = req.app.locals.db;
     var datos = db.collection('usuarios');
     var rkblob = db.collection('fs.files');
     var perfil = req.user;
